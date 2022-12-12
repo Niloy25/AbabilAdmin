@@ -1,0 +1,3568 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.btn:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+
+
+
+/****header****/
+.dashboard-header {
+  background-color: #FAF4EF;
+  height: 104px;
+}
+
+.dashboard-header .customNavbar {
+  padding: 10px 0px;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.dashboard-header .navbar-light .navbar-nav .nav-link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #8F6447;
+}
+
+.dashboard-header .navbar-light .navbar-nav .active>.nav-link {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #523929;
+}
+
+.dashboard-header .navbar-light .navbar-nav .nav-item {
+  padding: 0 20px;
+}
+
+.dashboard-header .rgt-cnt-btn a {
+  font-size: 25px;
+  padding: 0 20px;
+  color: #8F6447;
+}
+
+.dashboard-header .navbar-light .navbar-brand img {
+  width: 70px;
+  height: 70px;
+}
+
+.FormobileRgtCnt {
+  display: none;
+}
+
+/****header-end****/
+
+
+
+/****Dashboard-page***/
+.enrollment .customCOntainerfluid {
+  padding: 10px 0px;
+  max-width: 1280px;
+  margin: auto;
+}
+@media (max-width:768px){
+  .enrollment .customCOntainerfluid{
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.dashboard_Section .heading {
+  padding: 30px 0;
+}
+
+.dashboard_Section .heading .title {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+  color: #523929;
+}
+
+.dashboard_Section .heading .paraa {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #523929;
+}
+
+.first_SectionDashboard .card {
+  border: 0;
+  background: #F1E9E4;
+  border-radius: 12px;
+}
+.first_SectionDashboard .title_Section{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #523929;
+}
+.first_SectionDashboard .dropdownFIeld .weeklysElect {
+  border: 0;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #523929;
+}
+
+.first_SectionDashboard .dropdownFIeld {
+  max-width: 240px;
+  width: 100%;
+  height: 48px;
+}
+
+.first_SectionDashboard .cardTotal {
+  background: #EBDED6;
+  border-radius: 12px;
+  /* max-width: 290px; */
+  width: 100%;
+  height: 209px;
+  padding: 20px;
+  display: grid;
+  align-content: center;
+}
+
+.first_SectionDashboard .cardTotal .title_Dashboard {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 23px;
+  color: #523929;
+  padding-bottom: 20px;
+}
+
+.first_SectionDashboard .cardTotal .price_Dashboard {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  color: #523929;
+  padding-bottom: 20px;
+}
+
+.first_SectionDashboard .cardTotal .seeALlBTn {
+  background: #8F6447;
+  border-radius: 50px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #EBDED6;
+  max-width: 108px;
+  width: 100%;
+  height: 40px;
+  border: 0;
+}
+
+.first_SectionDashboard .customCOl .cardTotal .percentage_Dashboard {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #489047;
+  padding-bottom: 0;
+}
+
+.first_SectionDashboard .customCOl:nth-child(2) .cardTotal .percentage_Dashboard {
+  color: #A72F2F;
+}
+.first_SectionDashboard .customCOl:nth-child(4) .cardTotal .percentage_Dashboard {
+  color: #A72F2F;
+}
+
+
+  .first_SectionDashboard .mostSoldBookcards{
+    background: #EBDED6;
+    border-radius: 12px;
+    max-width: 604px;
+    width: 100%;
+    height: 483px;
+    overflow: hidden;
+  }
+  .first_SectionDashboard .mostSoldBookcards .mostSoldBookcardsInner{
+    overflow-y: auto;
+    height: 483px;
+    overflow-x: hidden;
+  }
+  .first_SectionDashboard .mostSoldBookcards .mostSoldBookcardsInner::-webkit-scrollbar{
+    width: 4px;
+  }
+  .first_SectionDashboard .mostSoldBookcards .mostSoldBookcardsInner::-webkit-scrollbar-thumb{
+    width: 4px;
+    background-color: rgba(143, 100, 71, 0.3);
+  }
+  .first_SectionDashboard .mostSoldBookcards .mostSoldBookcardsInner .mostSoldBookCardsInnerInner{
+    padding: 10px 24px;
+  }
+  .first_SectionDashboard .mostSoldBookcards .mostTitle{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    color: #523929;
+    padding: 15px 24px 0;
+  }
+  .first_SectionDashboard .mostSoldBookcards .shormostTitle{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 29px;
+    color: #523929;
+  }
+  .first_SectionDashboard .mostSoldBookcards .price{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    color: #523929;
+  }
+  .first_SectionDashboard .mostSoldBookcards .piece{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #523929;
+  }
+  .first_SectionDashboard .mostSoldBookcards .captionpara{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #523929;
+    display: block;
+    margin-bottom: 12px;
+  }
+  .first_SectionDashboard .mostSoldBookcards .format_Title{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #523929;
+  }
+  .first_SectionDashboard .mostSoldBookcards .format_Value{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+  }
+  .first_SectionDashboard .mostSoldBookcards .earn{
+    max-width: 170px;
+    width: 100%;
+    margin-right: 10px;
+    display: inline-block;
+  }
+  .first_SectionDashboard .mostSoldBookcards .title_Total{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;    
+    color: #523929;
+  }
+  .first_SectionDashboard .mostSoldBookcards .paid_Earn{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: #523929;
+  }
+  .first_SectionDashboard .mostSoldBookcards .mostSoldBookcardsInner .progressTitle{
+    max-width: 84px;
+    width: 100%;
+    height: 29px;
+    display: flex;
+    align-items: center;
+  }
+  .first_SectionDashboard .mostSoldBookcards .mostSoldBookcardsInner .progressTitle span{
+    margin: 0;
+    display: block;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 29px;
+    color: #523929;
+
+  }
+  .first_SectionDashboard .mostSoldBookcards .mostSoldBookcardsInner .main_progress{
+    max-width: 320px;
+    width: 100%;
+    height: 24px;
+    background: #F5EEEA;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+  }
+  .first_SectionDashboard .mostSoldBookcards .mostSoldBookcardsInner .main_progress .progress-bar{
+    background: #DF905B;
+    height: 10px;
+    border-radius: 50px;
+  }
+  .first_SectionDashboard .mostSoldBookcards .mostSoldBookcardsInner .progressValue{
+    max-width: 88px;
+    width: 100%;
+    height: 29px;
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #523929;
+  }
+  @media(max-width:768px){
+    .first_SectionDashboard .mostSoldBookcards{
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+
+  
+  .first_SectionDashboard .ratingStats{
+    background: #EBDED6;
+    border-radius: 12px;
+    max-width: 604px;
+    width: 100%;
+    height: 442px;
+    overflow: hidden;
+  }
+  .first_SectionDashboard .ratingStats .ratingStatsInner{
+    padding: 24px;
+  }
+  .first_SectionDashboard .ratingStats .mostTitle{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    color: #523929;
+  }
+  .first_SectionDashboard .ratingStats .ratingStatsInner .progressTitle{
+    max-width: 40px;
+    width: 100%;
+    height: 29px;
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+  }
+  .first_SectionDashboard .ratingStats .ratingStatsInner .progressTitle span{
+    margin: 0;
+    display: block;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #523929;
+  }
+  .first_SectionDashboard .ratingStats .ratingStatsInner .main_progress{
+    max-width: 330px;
+    width: 100%;
+    height: 40px;
+    background: #F5EEEA;
+    border-radius: 0px;
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+  }
+  .first_SectionDashboard .ratingStats .ratingStatsInner .main_progress .progress-bar{
+    background: #DF905B;
+    height: 40px;
+    border-radius: 0;
+  }
+  .first_SectionDashboard .ratingStats .ratingStatsInner .progressValue{
+    max-width: 120px;
+    width: 100%;
+    height: 29px;
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #523929;
+  }
+  .first_SectionDashboard .ratingStats .ratingStatsInner .des{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 29px;
+    color: #523929;
+  }
+  .first_SectionDashboard .ratingStats .ratingStatsInner .markRate{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 29px;
+    color: #523929;
+  }
+/****Dashboard-page***/
+
+/****Inventory-page***/
+
+
+
+
+
+/****Profile-page***/
+.profileSidebar{
+  background: #F1E9E4;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 100%;
+}
+.profileSidebar .media{
+  padding: 15px;
+}
+.profileSidebar .profie_MEdia{
+  max-width: 120px;
+  width: 100%;
+  height: 120px;
+}
+.profileSidebar .profie_MEdia img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.profileSidebar .viewOrders{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 32px;
+  color: #523929;
+}
+.profileSidebar .title{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  color: #523929;
+}
+.profileSidebar .ratingORders{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 32px;  
+  color: #523929;
+}
+.profileSidebar .viewOrders{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 32px;  
+  color: #523929;
+}
+.profileSidebar .ratingORders{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 32px;  
+  color: #523929;
+}
+.profileSidebar .ratingiCons{
+  color: #523929;
+  font-size: 13px;
+}
+
+.profileSidebar .list-group-item{
+  background-color: transparent;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 38px;
+  border: 0;
+  color: #523929;
+}
+.profileSidebar .list-group-item.listActive{
+  background: #EBDED6;
+  border: 0;
+}
+
+.profileInfo .title{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #523929;
+  padding: 0 15px;
+}
+.profileInfo label{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #010101;
+  padding: 0 15px;
+}
+.profileInfo .form-control{
+  background: #F1E9E4;
+  border: 1px solid #523929;
+  border-radius: 12px;
+  height: 64px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #523929;
+}
+.profileInfo .form-control::placeholder{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #52392971;
+}
+.profileInfo .form-controlreadonly{
+  background: #F2F2F2;
+  border-radius: 12px;
+  border: 0;
+}
+.profileInfo .phone_NumCOuntry{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  display: flex;
+  width: 50px;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+
+.profileInfo .cancelBtn{
+  border: 1px solid #8F6447;
+  border-radius: 12px;
+}
+.profileInfo .cancelBtn{
+  border: 1px solid #8F6447;
+  border-radius: 12px;
+  width: 100%;
+  height: 56px;
+
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #8F6447;
+}
+.profileInfo .savebTN{
+  background: #8F6447;
+  border-radius: 12px;
+  width: 100%;
+  height: 56px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+}
+@media (max-width:991px) {
+  .profileSidebar{
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width:768px) {
+  .profileSidebar .profie_MEdia {
+    max-width: 80px;
+    width: 100%;
+    height: 80px;
+  }
+  .profileSidebar .title {
+    font-size: 20px;
+    line-height: 18px;
+  }
+  .profileSidebar .viewOrders {
+    font-size: 12px;
+    line-height: 20px;
+  } 
+  .profileSidebar .ratingORders {
+    font-size: 12px;
+    line-height: 20px
+  }
+  .profileSidebar .ratingiCons {
+      color: #523929;
+      font-size: 12px;
+  }
+  .profileSidebar .list-group-item {
+      font-size: 18px;
+  }
+}
+/****Profile-page***/
+
+
+
+
+
+
+/****Notification-page***/
+.notifications_Section .customCard{
+  background: #F1E9E4;
+  border-radius: 12px;
+  height: 533px;
+  padding: 25px;
+  overflow-y: auto;
+}
+.notifications_Section .customCard::-webkit-scrollbar{
+  width: 0;
+}
+.notifications_Section .customCard .titleSection{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #523929;
+}
+.notifications_Section .customCard .clearBtn{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #A72F2F;
+  text-decoration: none;
+}
+
+.notifications_Section .customCard .customCardInner{
+  background: #EBDED6;
+  border-radius: 10px;
+  border: 0;
+  margin: 17px 0;
+}
+.notifications_Section .customCard .customCardInner .card-body .cardTitle{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;  
+  color: #523929;
+  margin: 0;
+}
+.notifications_Section .customCard .customCardInner .card-body .timing{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #523929;
+}
+.notifications_Section .customCard .customCardInner .card-body .paraDescription{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 26px;
+  color: #523929;
+  margin: 0;
+}
+
+/****Notification-page***/
+
+
+
+
+
+/****AnalyticsEmpty***/
+.uploadblankbooks{
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  height: calc(100vh - 104px);
+}
+.uploadblankbooks .title{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+}
+/****LogoitModal***/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****Inventory-page***/
+
+
+.enrollment .InventoryPage h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+  color: #523929;
+  padding-bottom: 15px;
+}
+.uploadblankbooks .para{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+  color: #523929;
+  padding-bottom: 15px;
+}
+.uploadblankbooks .uploadBooksBtn{
+  background: #8F6447;
+  border-radius: 8px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  max-width: 304px;
+  width: 100%;
+  height: 64px;
+}
+/****AnalyticsEmpty***/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****Inventory-page***/
+
+.enrollment .InventoryPage h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+  color: #523929;
+}
+
+.enrollment .InventoryPage .fileuploadbtn {
+  width: 223px;
+  height: 64px;
+  background: #8F6447;
+  margin-left: 14px;
+}
+
+.enrollment .InventoryPage .fileuploadbtn .form_label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 0;
+
+}
+
+.enrollment .InventoryPage .fileuploadbtn #uploadFile {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  left: -999px;
+  width: 1px;
+  height: 1px;
+}
+
+.enrollment .InventoryPage .ForSearch input {
+  width: 355px;
+  height: 64px;
+  background: #F1E9E4;
+  border-radius: 8px;
+  color: #8F6447;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  border: 0;
+}
+
+.enrollment .InventoryPage .ForSearch {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.enrollment .InventoryPage .ForSearch i {
+  position: absolute;
+  top: 35%;
+  right: 4%;
+  color: #8F6447;
+}
+
+.enrollment .InventoryPage .firstRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+
+}
+
+.secondRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.secondRow .rgtCnt a {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration-line: underline;
+  color: #8F6447;
+}
+.dropdownBox2 {
+  padding: 20px;
+  background: #EBDED6;
+  border-radius: 2px;
+  position: absolute;
+  width: 312px;
+  height: 268px;
+}
+.secondRow .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.secondRow .wrapper button {
+  background: #F1E9E4;
+  border-radius: 8px;
+  color: #523929;
+  border: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  height: 56px;
+}
+
+.secondRow .wrapper .btn1 {
+  width: 150px;
+  height: 56px;
+  margin-right: 10px;
+}
+
+.secondRow .wrapper .btn2 {
+  width: 108px;
+  height: 56px;
+  margin: 0 10px;
+}
+
+
+
+
+
+/**table***/
+.enrollment .table-responsive .table {
+  background-color: #F1E9E4;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+
+
+.secondRow .wrapper .btn1 {
+  width: 150px;
+  height: 56px;
+  margin-right: 10px;
+}
+
+.secondRow .wrapper .btn2 {
+  width: 108px;
+  height: 56px;
+  margin: 0 10px;
+  background: #F1E9E4;
+  border-radius: 8px;
+  padding-left: 30px;
+  border:0;
+ 
+}
+.secondRow .wrapper .price{
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0;
+}
+.secondRow .wrapper .price i{
+  position: absolute;
+  top: 20px;
+  left: 21px;
+  color: #523929;
+}
+.Order-page .frthRow span{
+  font-family: 'Roboto', sans-serif;
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 26px;
+color: #523929;
+
+}
+.Order-page .frthRow h4{
+  font-family: 'Roboto', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 26px;
+color: #523929;
+white-space: nowrap;
+}
+.Order-page .frthRow{
+  background: #F1E9E4;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.Order-page .frthRow p{
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 26px;
+color: #523929;
+}
+.cncltStatus{
+  margin-top: 34%;
+}
+.Order-page .frthRow a{
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 26px;
+color: #523929;
+}
+.Order-page .frthRow .callingNumber a{
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 26px;
+color: #523929;
+margin-right: 10px;
+}
+.Order-page .frthRow .callingNumber a span i{
+  margin-right: 6px;
+}
+.Order-page .frthRow button{
+  background: #D0B3A0;
+border-radius: 8px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 26px;
+color: #523929;
+border:0;
+margin:13px 0;
+width: 120px;
+height: 32px;
+}
+.cmpltStatus{
+  margin-top:74%;
+}
+.dispatchBtn{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  color: #8F6447;
+  border: 1px solid #8F6447;
+  border-radius: 8px;
+  width: 100%;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  display: flex;
+}
+/**table***/
+.enrollment .table-responsive .table {
+  background-color: #F1E9E4;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+.enrollment .table-responsive .table thead tr th {
+  border-bottom: 1px solid #c4c6c99c;
+  color: #523929;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  white-space: nowrap;
+}
+
+.enrollment .table-responsive .table tbody tr td {
+  white-space: nowrap;
+  border-bottom: 1px solid #c4c6c99c;
+  color: #523929;
+  ;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.enrollment .table-responsive .table tbody tr td a {
+  color: #523929;
+  margin-left: 40px;
+}
+
+.enrollment .table-responsive .table tbody tr td a .boxwrap h2 {
+  color: #523929;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.enrollment .table-responsive .table tbody tr td a .boxwrap h2 i {
+  margin-right: 10px;
+}
+
+.enrollment .table-responsive .table tbody tr td a .boxwrap {
+  background: #E7D9D0;
+  padding: 20px;
+  border-radius: 2px;
+  position: absolute;
+}
+
+/***end**/
+.enrollment .InventoryPage .secondRow .btn1 i {
+  margin-right: 10px;
+}
+
+.enrollment .InventoryPage .secondRow .btn2 i {
+  margin-right: 10px;
+}
+
+.enrollment .InventoryPage .form-check-input {
+  position: absolute;
+  margin-top: 0.3rem;
+  margin-left: 2.75rem;
+}
+
+.enrollment .InventoryPage .secondRow .form-check {
+  position: relative;
+  display: block;
+  padding-left: 0;
+}
+
+.enrollment .InventoryPage .secondRow .form-check-label {
+  width: 60px;
+  color: #523929;
+}
+
+.enrollment .InventoryPage .secondRow .dropdown-menu.show {
+  background-color:
+    #E7D9D0;
+}
+
+.enrollment .InventoryPage .secondRow .show>.btn-secondary.dropdown-toggle {
+  color: #fff;
+  background-color: #523929;
+  border-color: #4e555b;
+}
+
+/****delete-modal****/
+.book_details_modal2 {
+  text-align: center;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 111;
+  display: grid;
+  align-items: center;
+  align-content: center;
+}
+
+.book_details_modal2 .modal-content {
+  max-width: 659px;
+  margin: 0 auto;
+  min-height: 375px;
+  padding: 32px 28px;
+  padding: 3%;
+  display: grid;
+  align-items: center;
+
+}
+
+.enrollment .book_details_modal2 .title{
+  font-style: normal;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  color: #523929;
+  padding-bottom: 15px;
+}
+.enrollment .book_details_modal2 .paraDed{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+  color: #523929;
+  margin: 5px 0;
+  padding: 6px 0;
+  margin-bottom: 23px;
+}
+
+.book_details_modal2 a {
+  color: #523929;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+}
+
+.book_details_modal2 .noBtn {
+  color: #523929;
+  border: 1px solid #8F6447;
+  height: 56px;
+  border-radius: 8px;
+  margin: 0 20px;
+  display: inline-block;
+  width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.book_details_modal2 .btnBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/***editimageModal***/
+.book_details_modal3 {
+  text-align: center;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  display: grid;
+  align-items: center;
+  align-content: center;
+}
+
+.book_details_modal3 .modal-content {
+  max-width: 659px;
+  margin: 0 auto;
+  height: 284px;
+  padding: 32px 28px;
+  font-family: 'Noto Serif', serif;
+  padding: 3%;
+
+}
+
+.book_details_modal3 h2 {
+  color: #523929;
+  font-size: 27px;
+  font-weight: 600;
+  font-family: 'Noto Serif', serif;
+}
+
+.book_details_modal3 p {
+  color: #523929;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 20px 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.book_details_btn_explore {
+  background-color: #8F6447;
+  color: #fff;
+  border: 0;
+  height: 56px;
+  border-radius: 8px;
+  margin: 0 20px;
+  width: 140px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.book_details_modal3 a {
+  color: #523929;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+}
+
+.book_details_modal3 .noBtn {
+  color: #523929;
+  border: 1px solid #8F6447;
+  height: 56px;
+  border-radius: 8px;
+  margin: 0 20px;
+  display: inline-block;
+  width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.book_details_modal3 .btnBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*-----------Sign Up Form----------------*/
+
+.sign_up {
+  margin-top: 5%;
+}
+
+.sign_up .row {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sign_up .register {
+  width: 100%;
+}
+
+.sign_up .register .user_icon {
+  margin-right: 25px;
+}
+
+.sign_up .register li {
+  list-style: none;
+  font-size: 45px;
+  color: #523929;
+}
+
+/* .sign_up .user_details{
+  width:100%;
+} */
+
+.sign_up .user_details h4 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  text-align: left;
+  color: #523929;
+}
+
+.sign_up .user_details h6 {}
+
+/**Edit--Book--modal**/
+.book_edit_modal4 {
+  text-align: center;
+
+}
+
+.book_edit_modal4 .modal-content {
+  padding: 30px;
+  border: none;
+}
+
+.book_edit_modal4 .modal-content .book_details .head h4 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #523929;
+  text-align: start;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+
+.book_edit_modal4 .modal-content .book_details .form-group label {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 26px;
+  color: #523929;
+  opacity: 0.5;
+  text-align: start;
+  display: flex;
+}
+
+.book_edit_modal4 .modal-content .book_details .form-group input {
+  width: 100%;
+  height: 48px;
+  background: #F1E9E4;
+  border-radius: 8px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #523929;
+  box-shadow: none;
+  outline: 0;
+}
+
+.book_edit_modal4 .modal-content .book_details .form-group select {
+  width: 100%;
+  height: 48px;
+  background: #F1E9E4;
+  border-radius: 8px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #523929;
+  box-shadow: none;
+  outline: 0;
+}
+
+.book_edit_modal4 .modal-content .book_details .form-group textarea {
+  width: 100%;
+  height: auto;
+  background: #F1E9E4;
+  border-radius: 8px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #523929;
+  box-shadow: none;
+  outline: 0;
+  resize: none;
+}
+
+.book_edit_modal4 .modal-content .book_details .bottom_head h4 {
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #523929;
+  text-align: start;
+  display: flex;
+}
+
+.book_edit_modal4 .modal-content .book_details .form-group.unitinput {
+  position: relative;
+}
+
+.book_edit_modal4 .modal-content .book_details .form-group.unitinput .unit_text {
+  position: absolute;
+  top: 47px;
+  right: 20px;
+}
+
+.book_edit_modal4 .modal-content .book_details .form-group.unitinput .unit_text h6 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #523929;
+  padding: 0;
+  margin: 0;
+}
+
+.book_edit_modal4 .modal-content .book_details .another_booktype {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: 60px;
+}
+
+.book_edit_modal4 .modal-content .book_details .another_booktype a {
+  text-decoration: none;
+  cursor: pointer;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #8F6447;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.book_edit_modal4 .modal-content .book_details .another_booktype a i {
+  font-size: 20px;
+  color: #8F6447;
+  margin-right: 5px;
+}
+
+.book_edit_modal4 .modal-content .book_details .savechanges_btn .btn {
+  width: 100%;
+  height: 56px;
+  background: #8F6447;
+  border-radius: 12px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: none;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign_up .sign_up_form {
+  margin-top: 5%;
+}
+
+.sign_up .sign_up_form h6 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  color: #523929;
+}
+
+.sign_up .sign_up_form h3 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  color: #523929;
+}
+
+.sign_up .sign_up_form .form-box label {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  color: #000000;
+}
+
+.sign_up .sign_up_form .form-box .form-input {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  color: #523929;
+  background: #F1E9E4;
+  border-radius: 12px;
+  box-shadow: none;
+  outline: 0;
+}
+
+::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #523929;
+}
+
+::-webkit-input-placeholder {
+  /* Edge */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #523929;
+}
+
+.privacy_policy .form-box {
+  display: flex;
+}
+
+.privacy_policy .apply {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.privacy_policy .approval-btn {
+  width: 931px;
+  height: 56px;
+}
+
+.button {
+  margin: 3%;
+}
+
+.button .apply {
+  text-align: center;
+}
+
+.button .approval {
+  width: 931px;
+  height: 56px;
+  background: #8F6447;
+  border-radius: 12px;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+  box-shadow: none;
+  outline: 0;
+  width: 100%;
+}
+
+
+
+.book_edit_modal4 .modal-content .book_details .form-group input {
+  width: 100%;
+  height: 48px;
+  background: #F1E9E4;
+  border-radius: 8px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #523929;
+  box-shadow: none;
+  outline: 0;
+}
+
+.book_edit_modal4 .modal-content .book_details .form-group select {
+  width: 100%;
+  height: 48px;
+  background: #F1E9E4;
+  border-radius: 8px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #523929;
+  box-shadow: none;
+  outline: 0;
+}
+
+.book_edit_modal4 .modal-content .book_details .form-group textarea {
+  width: 100%;
+  height: auto;
+  background: #F1E9E4;
+  border-radius: 8px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #523929;
+  box-shadow: none;
+  outline: 0;
+  resize: none;
+}
+
+.book_edit_modal4 .modal-content .book_details .bottom_head h4 {
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #523929;
+  text-align: start;
+  display: flex;
+}
+
+.book_edit_modal4 .modal-content .book_details .form-group.unitinput {
+  position: relative;
+}
+
+.book_edit_modal4 .modal-content .book_details .form-group.unitinput .unit_text {
+  position: absolute;
+  top: 47px;
+  right: 20px;
+}
+
+.book_edit_modal4 .modal-content .book_details .form-group.unitinput .unit_text h6 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #523929;
+  padding: 0;
+  margin: 0;
+}
+
+.book_edit_modal4 .modal-content .book_details .another_booktype {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: 60px;
+}
+
+.book_edit_modal4 .modal-content .book_details .another_booktype a {
+  text-decoration: none;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #8F6447;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.book_edit_modal4 .modal-content .book_details .another_booktype a i {
+  font-size: 20px;
+  color: #8F6447;
+  margin-right: 5px;
+}
+
+.book_edit_modal4 .modal-content .book_details .savechanges_btn .btn {
+  width: 100%;
+  height: 56px;
+  background: #8F6447;
+  border-radius: 12px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: none;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/****order-dispatch-modal***/
+.order-dispatch_modal4 .modal-content {
+  max-width: 479px;
+  margin: 0 auto;
+  height: 464px;
+  padding: 32px 28px;
+  font-family: 'Noto Serif', serif;
+  padding: 3%;
+
+}
+.order-dispatch_modal4 {
+  
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  display: grid;
+  align-items: center;
+  align-content: center;
+}
+.order-dispatch_modal4 h2 {
+  color: #523929;
+  font-size: 27px;
+  font-weight: 600;
+  font-family: 'Roboto';
+  margin-bottom: 30px;
+
+}
+.order-dispatch_modal4 label{
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 16px;
+color: #000000;
+opacity: 0.5;
+}
+.order-dispatch_modal4 input{
+  background: #F1E9E4;
+border-radius: 8px;
+width: 415px;
+height: 48px;
+font-family: 'Roboto';
+}
+.order-dispatch_modal4 .orderDispatch_btn{
+  background: #8F6447;
+border-radius: 8px;
+width: 415px;
+height: 56px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 26px;
+color: #FFFFFF;
+border:0;
+}
+/****single-upload-modal****/
+.single_upload_modal5 .modal-content {
+  max-width: 564px;
+  margin: 0 auto;
+  height: 439px;
+  padding: 32px 28px;
+  font-family: 'Noto Serif', serif;
+  padding: 3%;
+
+}
+.single_upload_modal5 {
+  
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  display: grid;
+  align-items: center;
+  align-content: center;
+  padding: 2%;
+}
+.single_upload_modal5 .wrap-box .img-box{
+  background: #F1E9E4;
+  border-radius: 8px;
+  width: 226px;
+height: 226px;
+display: flex;
+margin-bottom: 30px;
+}
+.single_upload_modal5 .wrap-box .img-box img{
+  margin: auto;
+  display: table;
+}
+.single_upload_modal5 .wrap-box h4{
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 21px;
+color: #8F6447;
+}
+.single_upload_modal5 .wrap-box p{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #523929;
+}
+.single_upload_modal5 .modal-content h2{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  color: #523929;
+  margin-bottom:30px;
+}
+/****image-upload****/
+.imageUploadModal .form_label {
+ 
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  color: #523929;
+  text-align: center;
+  margin-bottom: 0;
+}
+.imageUploadModal #uploadFile {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  left: -999px;
+  width: 1px;
+  height: 1px;
+}
+.imageUploadModal .image_area.upBox{
+  border: 1px dashed #523929;
+border-radius: 6px;
+background: #F1E9E4;
+height: 250px !important;
+box-shadow: none !important;
+display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.uploadProcessText{
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 32px;
+color: #523929;
+margin: 12px 0;
+}
+.progressClose{
+color: #000000;
+font-size: 16px;
+margin-left: 12px;
+cursor: pointer;
+}
+.showProgressValue{
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 22px;
+color: #8F6447;
+margin-top: 10px;
+}
+.book_edit_modal4 .modal-content .left_cnt .image_area.upBox img {
+  object-fit: cover;
+  height: 70px;
+  width: 70px;
+  display: block;
+  margin: auto;
+}
+/****imageuploadForBulkModal****/
+.imageuploadForBulkModal .modal-content {
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 375px;
+  padding: 32px 28px;
+  padding: 3%;
+  display: grid;
+  align-items: center;
+  padding: 2%;
+}
+.imageuploadForBulkModal {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 111;
+  display: grid;
+  align-items: center;
+  align-content: center;
+}
+.book_edit_modal4.imageUploadModal.imageuploadForBulkModal .progress.main_progress {
+
+max-width: 320px;
+width: 267px;
+height: 12px;
+background: #F8F4F2;
+border-radius: 50px;
+display: flex;
+align-items: center;
+padding: 0 10px;
+}
+.book_edit_modal4.imageUploadModal.imageuploadForBulkModal .progress.main_progress .progress-bar{
+  background: #DF905B;
+  height: 10px;
+  border-radius: 50px;
+  width: 200px;
+height: 8px;
+}
+.imageuploadForBulkModal  .modal-content h4 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  color: #523929;
+  margin-bottom: 30px;
+}
+.imageuploadForBulkModal  .modal-content p {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #523929;
+}
+/****uploadsuccessforBulkModal****/
+.uploadSuccessForBulkModal .modal-content {
+  max-width: 659px;
+  margin: 0 auto;
+  min-height: 375px;
+  padding: 32px 28px;
+  padding: 3%;
+  display: grid;
+  align-items: center;
+}
+.uploadSuccessForBulkModal {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 111;
+  display: grid;
+  align-items: center;
+  align-content: center;
+}
+/***downloadSheetModal***/
+.image_area.download{
+  background: #F1E9E4;
+  border-radius: 6px;
+  max-width: 653px;
+height: 245px;
+display: grid;
+align-items: center;
+align-content: center;
+margin: auto;
+}
+.image_area.download p{
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 32px;
+color: #523929;
+}
+.image_area.download a{
+  text-decoration-line: underline;
+  color: #8F6447;
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 22px;
+}
+/*-----Multistep Form---------*/
+.multistepform {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  padding: 2%;
+}
+
+.stepsfrom {
+  max-width: 800px;
+  margin: 100px auto;
+  background: #fff;
+  height: 600px;
+  overflow-y: auto;
+  position: relative;
+}
+
+
+.close-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  padding: 10px 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.stepsfrom .go3842760039:before {
+  display: none;
+}
+
+.stepsfrom .go433304200:before {
+  display: none;
+}
+
+.stepsfrom .go2335061104:before {
+  display: none;
+}
+
+.stepsfrom .go2150698616 {
+  border: none;
+}
+
+.stepsfrom .go2392553372 {
+  padding-bottom: 0;
+padding-left: 1%;
+}
+.modaltitle{
+  padding-left: 2%;
+  padding-top: 2%;
+}
+p.edittitle {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  color: #523929;
+  margin-bottom: 0;
+}
+
+/* .stepsfrom .go2150698616:after {
+  content: " ";
+  width: 48px;
+  height: 0px;
+  background: #8F6447;
+  border: 2px solid #8F6447;
+} */
+
+.stepsfrom .go2150698616 span {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 32px;
+  color: #8F6447;
+}
+
+
+.book_edit_modal4 .modal-content .left_cnt .image_area {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 10px;
+}
+
+.book_edit_modal4 .modal-content .left_cnt .image_area img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.book_edit_modal4 .modal-content .left_cnt .image_area .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(143, 100, 71, 0.5);
+}
+
+.book_edit_modal4 .modal-content .left_cnt .image_area .overlay .edit_frontimg {
+  width: 100%;
+  max-width: 156px;
+  height: 40px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #523929;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  right: 10px;
+  z-index: 20;
+  margin: 0 auto;
+}
+
+.book_edit_modal4 .modal-content .right_cnt .head h4 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  color: #523929;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.book_edit_modal4 .modal-content .right_cnt .list_area li {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #523929;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+/* .book_edit_modal4 .modal-content .right_cnt .list_area li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background: #523929;
+  border-radius: 50%;
+} */
+
+.book_edit_modal4 .modal-content .right_cnt .continue_btn .btn {
+  width: 100%;
+  height: 56px;
+  background: #8F6447;
+  border-radius: 12px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 10px 10px;
+  cursor: pointer;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalitem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modalitem .modalwrap {
+  width: 70%;
+}
+
+.modalitem .modalwrapcontent {
+  width: 30%;
+}
+
+.modalitem .modalwrap .left_cnt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modalitem .modalwrapcontent .right_cnt {
+  margin: 0 10px;
+}
+.confirmation_page .icon_area {
+  width: 100%;
+  max-width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px;
+
+}
+.confirmation_page .icon_area img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.confirmation_page .head h3 {
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 28px;
+line-height: 33px;
+color: #8F6447;
+text-align: center;
+margin-bottom: 20px;
+}
+.confirmation_page .text p {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+  color: #523929;
+}
+
+
+
+
+
+
+/*--------Payments--------*/
+h1.enrty-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+  color: #523929;
+  margin: 20px 0;
+}
+
+
+.paymentModal {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 111;
+  display: grid;
+  align-items: center;
+}
+
+.paymentModal .modal-content {
+  max-width: 659px;
+  margin: 0 auto;
+  height: 500px;
+  overflow-y: auto;
+  padding: 32px 28px;
+  padding: 0;
+  display: grid;
+  overflow-x: hidden;
+  align-items: center;
+}
+.paymentModal .modal-content::-webkit-scrollbar{
+  width: 0;
+}
+.paymentModal .modal-content .formTitle{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #523929;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.paymentModal .modal-content .formValue{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  color: #523929;
+  display: block;
+}
+.paymentModal .modal-content .address_TItle{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  color: #523929;
+}
+.paymentModal .modal-content .right_Section{
+  padding-left: 35px;
+}
+.paymentModal .modal-content .right_Title{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #523929;
+  margin: 0;
+}
+
+.paymentModal .modal-content .paylogoWi{
+  max-width: 40px;
+  width: 100%;
+  height: 40px;
+}
+.paymentModal .modal-content .address_TExt{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  color: #523929;
+  max-width: 147px;
+  width: 100%;
+}
+.paymentModal .modal-content .customTable{
+  border: 1px solid #523929;
+  background-color: transparent;
+}
+.paymentModal .modal-content .customTable thead tr th{
+  border: 0;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #523929;
+}
+
+.paymentModal .modal-content .customTable tbody tr td{
+  border: 0;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #523929;
+}
+.paymentModal .modal-content .customTable tfoot tr td{
+  border-top: 1px solid #523929;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #523929;
+}
+
+.paymentModal .modal-content .lasttitle{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #523929;
+}
+
+.paymentModal .modal-content .pedingTitle{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  color: #523929;
+}
+
+.paymentModal .modal-content .downloadInvoice{
+  background: #8F6447;
+  border-radius: 4px;
+  max-width: 248px;
+  width: 100%;
+  height: 45px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.paymentModal .modal-content .downloadInvoice .btn{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+@media(max-width:768px){
+  .paymentModal .modal-content {
+    display: block;
+    padding-bottom: 20px;
+  }
+  .paymentModal .close-modal-part{
+    width: 100%;
+  }
+  .paymentModal .modal-content .right_Section {
+    padding-left: 14px;
+  }
+}
+
+
+/***order-page****/
+.enrollment .Order-page .ForSearch input {
+  width: 355px;
+  height: 64px;
+  background: #F1E9E4;
+  border-radius: 8px;
+  color: #8F6447;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  border: 0;
+}
+
+.enrollment .Order-page .ForSearch i {
+  position: absolute;
+  top: 35%;
+  right: 4%;
+  color: #8F6447;
+}
+
+.enrollment .Order-page .firstRow .heading {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+  color: #523929;
+}
+
+.enrollment .Order-page .firstRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+  flex-wrap: wrap;
+}
+
+.enrollment .Order-page .ForSearch {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.sndRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sndRow .processBtn button {
+  color: #8F6447;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  border: 0;
+  background-color: transparent;
+  padding-bottom: 10px;
+}
+
+.sndRow .processBtn span {
+  width: 28px;
+  height: 28px;
+  background-color: #8F6447;
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  flex-basis: revert;
+  padding-top: 5px;
+  background: #D0B3A0;
+border-radius: 2px;
+margin-left: 10px;
+}
+.sndRow .processBtn button:focus-within{
+   color: #523929;
+   border-bottom: 2px solid #523929;
+}
+.sndRow .processBtn button:focus-within span{
+  background-color: #523929;
+}
+.sndRow{
+  background-color: #F1E9E4;
+  padding: 20px 14px 0;
+}
+/***responsive-start***/
+@media only screen and (max-width:991px) {
+  .cncltStatus {
+    margin-top: 0;
+}
+  .cmpltStatus{
+    margin-top:0;
+  }
+  .rgtcntFoeMD{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+  }
+  .rgtcntFoeMD span{
+    display: block;
+  }
+  .dashboard-header .navbar-light .navbar-nav .nav-link{
+    color: #fff;
+  }
+  .sndRow{
+    flex-wrap: wrap;
+  }
+  .secondRow .rgtCnt {
+    margin-top: 20px;
+  }
+
+  .dashboard-header .navbar-light .navbar-collapse {
+    margin-top: 2%;
+    background-color: #523929;
+    padding: 20px 0;
+    position: relative;
+    z-index: 99;
+  }
+  .dashboard-header .navbar-light .navbar-nav .active>.nav-link{
+    color: #f4d0b9;
+  }
+
+  .dashboard-header .navbar-light .rgt-cnt-btn {
+    margin-top: 20px;
+    display: none;
+  }
+
+  .FormobileRgtCnt {
+    display: block;
+    position: absolute;
+    top: 5%;
+    right: 13%;
+  }
+
+  .dashboard-header .rgt-cnt-btn a {
+    font-size: 25px;
+    padding: 0 10px;
+  }
+}
+
+@media only screen and (max-width:767px) {
+  .modalitem{
+    flex-wrap: wrap;
+  }
+  .modalitem .modalwrap {
+    width: 100%;
+}
+.modalitem .modalwrapcontent {
+  width: 100%;
+  margin-top: 30px;
+}
+  .flexWrap{
+     flex-wrap: wrap;
+  }
+  .flexWrap .rgtcnt{
+    width:100%;
+    margin-left:0 !important;
+    margin-top:20px;
+  }
+  .secondRow .wrapper .pricebtnarea {
+    margin-top: 20px;
+  }
+
+  .FormobileRgtCnt {
+    right: 17%;
+  }
+
+  .enrollment .InventoryPage .fileuploadbtn {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+  /* .sign_up .register .row{
+      justify-content: space-between;
+      } */
+
+  .sign_up .register li {
+    font-size: 30px;
+  }
+
+  .sign_up .user_details h4 {
+    font-size: 20px;
+  }
+
+  .sign_up .user_details h6 {
+    font-size: 12px;
+  }
+
+  .sign_up .register .user_icon {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width:575px) {
+  .book_edit_modal4 .modal-content .left_cnt .image_area.upBox img {
+    object-fit: cover;
+    height: 48px;
+    width: 48px;
+  }
+  .firstRow {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .enrollment .InventoryPage .ForSearch input {
+    width: 100%;
+  }
+
+  .enrollment .InventoryPage .fileuploadbtn {
+    width: 100%;
+  }
+
+  .enrollment .InventoryPage .ForSearch {
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width:525px) {
+  .FormobileRgtCnt {
+    right: 28%;
+  }
+}
+
+@media only screen and (max-width:384px) {
+  .secondRow .wrapper button {
+    font-size: 16px;
+  }
+
+  .secondRow .wrapper .btn1 {
+    width: 122px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* CONFIRMATION */
+
+#confirmation {
+  margin-top: 5%;
+  justify-content: center;
+  align-items: center;
+}
+
+#confirmation .row {
+  justify-content: center;
+  align-items: center;
+}
+
+#confirmation .user-top {
+  width: 100%;
+  text-align: center;
+}
+
+#confirmation .user-icon {
+  width: 100%;
+  text-align: center;
+}
+
+#confirmation .user-icon img {
+  width: 133px;
+  height: 85px;
+  object-fit: cover;
+}
+
+#confirmation .user-top h3 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  color: #523929;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding-top: 30px;
+}
+
+#confirmation .user-top h6 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 26px;
+  color: #523929;
+  padding-top: 10px;
+}
+
+.features {
+  margin-top: 5%;
+}
+
+.features h6 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  color: #523929;
+}
+
+.features .background {
+  width: 100%;
+  max-width: 1280px;
+  min-height: 720px;
+  background: #f1e9e4;
+  border-radius: 12px;
+  padding: 30px 0;
+}
+
+.features .blank-box {
+  width: 100%;
+  max-width: 720px;
+  height: 640px;
+  background: #c4c4c4;
+  border-radius: 12px;
+}
+
+.features .anaytics-dashboard h3 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  color: #523929;
+  text-align: center;
+}
+
+.features .anaytics-dashboard p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 32px;
+  color: #523929;
+  text-align: center;
+}
+
+.features .content {
+  padding-top: 20px;
+  position: relative;
+}
+
+.features .content h4 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #523929;
+  position: relative;
+}
+
+.features .anaytics-dashboard .content h4::before {
+  content: " ";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #523929;
+  border-radius: 50%;
+  top: 9px;
+  bottom: 0;
+  left: -20px;
+  right: 0;
+}
+
+.features .content p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #523929;
+  text-align: left;
+}
+
+.faq {
+  margin-top: 5%;
+  /* padding: 0 20px; */
+}
+
+.faq h6 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  color: #523929;
+}
+
+.faq .faq-background {
+  width: 100%;
+  min-height: 452px;
+  background-color: #f1e9e4;
+  border-radius: 12px;
+}
+
+.faq .content {
+  padding: 30px 30px;
+  position: relative;
+}
+
+.faq .content h4 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #523929;
+  position: relative;
+}
+
+.faq .content h4::before {
+  content: " ";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #523929;
+  border-radius: 50%;
+  top: 9px;
+  bottom: 0;
+  left: -20px;
+  right: 0;
+}
+
+.faq .content p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #523929;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  #confirmation .user-top h3 {
+    font-size: 25px;
+    padding-top: 20px;
+  }
+
+  #confirmation .user-top h6 {
+    font-size: 15px;
+  }
+
+  .features h6 {
+    font-size: 20px;
+  }
+
+  .features .background {
+    width: 100%;
+    height: auto;
+  }
+
+  .features .blank-box {
+    width: 100%;
+    /* max-width: 720px; */
+    height: 640px;
+  }
+
+  .features .anaytics-dashboard h3 {
+    font-size: 22px;
+  }
+
+  .features .anaytics-dashboard p {
+    font-size: 14px;
+  }
+
+  .features .content {
+    padding-top: 10px;
+    position: relative;
+  }
+
+  .features .content h4 {
+    font-size: 18px;
+  }
+
+  .features .anaytics-dashboard .content h4::before {
+    content: " ";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #523929;
+    border-radius: 50%;
+    top: 9px;
+    bottom: 0;
+    left: -20px;
+    right: 0;
+  }
+
+  .features .content p {
+    font-size: 14px;
+  }
+
+  .faq h6 {
+    font-size: 25px;
+  }
+
+  .faq .faq-background {
+    width: 100%;
+    height: 100%;
+    background-color: #f1e9e4;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  .features .anaytics-dashboard {
+    margin-top: 10%;
+  }
+}
+
+@media (max-width: 575px) {
+  .features .anaytics-dashboard {
+    margin-top: 15%;
+  }
+}
+@media only screen and (max-width:500px){
+  .single_upload_modal5 .modal-content .wrap-box{
+        margin:auto;
+  }
+  .single_upload_modal5 .modal-content{
+    height: auto;
+  }
+}
+@media only screen and (max-width:490px){
+  .order-dispatch_modal4 input{
+    width:100%;
+  }
+  .order-dispatch_modal4 .orderDispatch_btn{
+    width:100%;
+  }
+  .order-dispatch_modal4{
+    padding: 3%;
+  }
+}
+@media (max-width: 360px) {
+  .features .anaytics-dashboard {
+    margin-top: 20%;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* NO-OFFERS */
+
+.no-offers {
+  margin-top: 5%;
+}
+
+.no-offers h6 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+  color: #523929;
+}
+
+/* .no-offers .content{
+  margin: 10% 0;
+} */
+
+.no-offers .row {
+  justify-content: center;
+  align-items: center;
+}
+
+.no-offers .price-tag {
+  width: 100%;
+  text-align: center;
+}
+
+.no-offers .price-tag img {
+  width: 143px;
+  height: 143px;
+  object-fit: cover;
+}
+
+.no-offers h4 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  color: #523929;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.no-offers p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+  color: #523929;
+  padding-top: 10px;
+}
+
+.no-offers .offer-btn{
+  text-align: center;
+  padding-top: 10px;
+}
+
+.no-offers .apply-button {
+  width: 304px;
+  height: 64px;
+  border-radius: 8px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  background-color: #8F6447;
+  box-shadow: none;
+  outline: 0;
+  border: none;
+  text-align: center;
+}
+
+@media(max-width:768px){
+  .no-offers {
+    padding: 0 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* SELECTED BOOKS */
+
+.selected-books {
+  margin-top: 5%;
+}
+
+.selected-books .row {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.selected-books {
+  margin-top: 5%;
+}
+
+.selected-books li {
+  list-style: none;
+  width: 111px;
+  height: 111px;
+  font-size: 111px;
+}
+
+.selected-books h5 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  color: #523929;
+}
+
+.selected-books p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 32px;
+  color: #523929;
+}
+
+.selected-books .sign_up_form {
+  margin-top: 5%;
+}
+
+.selected-books .sign_up_form h6 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  color: #523929;
+}
+
+.selected-books .sign_up_form h3 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  color: #523929;
+}
+
+.selected-books .sign_up_form .form-box label {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  color: #000000;
+}
+
+.selected-books .sign_up_form .form-box .form-input {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  color: #523929;
+  background: #f1e9e4;
+  border-radius: 12px;
+  box-shadow: none;
+  outline: 0;
+}
+
+.selected-books .sign_up_form .form-box #form_labelFile{
+  height: 169px;
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  border: 0.71134px dashed #555555;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.selected-books .uloadpsbna .edit_TExt{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;    
+  color: #523929;
+}
+.selected-books .uloadpsbna .para_TExt{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #523929;
+}
+.selected-books .form-box #uploadFile {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  left: -999px;
+  width: 1px;
+  height: 1px;
+}
+.selected-books .view_BTn{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  text-decoration-line: underline;
+  color: #8F6447;
+  background-color: transparent;
+  border: 0;
+}
+
+.selected-books .apply {
+  margin-top: 50px;
+}
+
+.selected-books .apply .approval {
+  width: 931px;
+  height: 56px;
+  background: #8f6447;
+  border-radius: 12px;
+  border: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: none;
+  outline: 0;
+  width: 100%;
+}
+
+
+
+
+
+/* OFFERS-TABLE */
+
+.offers-table {
+  margin-top: 5%;
+}
+
+.offers-table .top-right{
+ position: relative;
+}
+
+.offers-table .top-right .search-icon{
+  position: absolute;
+  color: #523929;
+  font-size: 20px;
+  right: 0;
+  top: 0px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 47px;
+ }
+
+.offers-table h3 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+  color: #000000;
+}
+
+.offers-table .form-control {
+  max-width: 355px;
+  width: 100%;
+  height: 64px;
+  box-shadow: none;
+  outline: 0;
+  background-color: #faf4ef;
+  border: none;
+  padding-right: 47px
+}
+
+.offers-table ::placeholder {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #523929;
+  padding-left: 20px;
+}
+
+.offers-table .create-offer {
+  max-width: 223px;
+  width: 100%;
+  height: 64px;
+  background-color: #8f6447;
+  box-shadow: none;
+  outline: 0;
+  border: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.offers-table .create-offer a{
+text-decoration: none;
+font-family: "Roboto";
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 19px;
+text-align: center;
+color: #ffffff;
+}
+
+.offers-table .plus-icon{
+  margin-right:5px;
+ }
+
+.offers-table i{
+ margin-right:5px;
+}
+
+@media(max-width:768px){
+  
+
+   .offers-table .form-control {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .offers-table .create-offer {
+    width: 100%;
+  margin-top: 10px;
+  }
+}
+
+
+
+
+.selectbookmodal {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 111;
+  display: grid;
+  align-items: center;
+}
+
+.selectbookmodal .modal-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 500px;
+  overflow-y: auto;
+  padding: 0;
+  overflow-x: hidden;
+  /* display: grid;
+  align-items: center; */
+}
+
+.selectbookmodal .modal-content .sectionTitle{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  color: #523929;
+  margin: 0;
+}
+
+.selectbookmodal .modal-content .paratitle{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 32px;
+  color: #523929;
+  margin: 0;
+}
+
+.selectbookmodal .modal-content .inputCusotm{
+  width: 355px;
+  margin-right: 20px;
+}
+.selectbookmodal .modal-content .inputCusotm .form-control{
+  background: #F1E9E4;
+  border-radius: 8px;
+  width: 100%;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #523929;
+  border: 0;
+  height: 50px;
+  box-shadow: none;
+}
+.selectbookmodal .modal-content .inputCusotm .crossicons{
+  position: absolute;
+  right: 11px;
+  top: 16px;
+}
+.selectbookmodal .modal-content .doneBtn{
+  background: #8F6447;
+  border-radius: 8px;
+  max-width: 190px;
+  width: 100%;
+  height: 50px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  border: 0;
+  color: #FFFFFF;
+
+}
+.selectbookmodal .modal-content .customTable{
+  background-color: transparent;
+  border: 1.44839px solid rgba(0, 0, 0, 0.1);
+}
+.selectbookmodal .modal-content .customTable tr td{
+  background-color: transparent;
+  border: 1.44839px solid rgba(0, 0, 0, 0.1);
+}
+.selectbookmodal .modal-content .customTable tr th{
+  background-color: transparent;
+  border: 1.44839px solid rgba(0, 0, 0, 0.1);
+}
+.selectbookmodal .modal-content .customTable .newInput{
+  background: #F1E9E4;
+  border: 1px solid #8F6447;
+  border-radius: 5px;
+  max-width: 152px;
+  width: 100%;
+  height: 48px;
+}
+.selectbookmodal .modal-content .customTable .checkForminput{
+  background: #F1E9E4;
+  border-radius: 2px;
+  width: 24px;
+  height: 24px;
+}
+@media(max-width:768px){
+  .selectbookmodal .modal-content .inputCusotm {
+      width: 100%;
+      margin-right: 20px;
+  }
+  .enrollment .Order-page .ForSearch input {
+    width: 285px;
+  }
+}
+.offersubmitModal {
+  text-align: center;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 111;
+  display: grid;
+  align-items: center;
+  align-content: center;
+}
+
+.offersubmitModal .modal-content {
+  max-width: 659px;
+  margin: 0 auto;
+  min-height: 375px;
+  padding: 32px 28px;
+  padding: 3%;
+  display: grid;
+  align-items: center;
+  border-radius: 12px;
+  border: 0;
+}
+
+.enrollment .offersubmitModal .modaltitle{
+  font-style: normal;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  color: #523929;
+  padding-bottom: 15px;
+}
+.enrollment .offersubmitModal .modalpara{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+  color: #523929;
+  margin: 5px 0;
+  padding: 6px 0;
+  margin-bottom: 23px;
+}
+
+.enrollment .offersubmitModal .modalbtn{
+  background: #8F6447;
+  border-radius: 8px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  max-width: 304px;
+  width: 100%;
+  border: 0;
+  height: 64px;
+}
+
+@media(max-width:768px){
+  .offersubmitModal {
+    padding: 20px;
+  }
+}
+
