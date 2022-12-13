@@ -1,14 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Singleupload from "../../Component/Modal/SingleUploadFlowModal/Singleupload";
 import ProductInformation from "../../Component/ProductInformation";
 import Table from "../../Component/Table";
 import upload from "../../images/upload.png";
+import { requestData } from "../../Utils/HttpClient";
 
 export default function Index() {
   const [modal, setModal] = useState(false);
+  const [allInventory, setAllInventory] = useState([])
+
+  useEffect(() => {
+    fetchInventory()
+  }, [])
+  
+
   const handleClickClose = () => {
     setModal(!modal);
   };
+
+  const fetchInventory = async() => {
+    const result = await requestData('distributor/view-all-books', 'GET');
+    console.log(result);
+    if(result.status){
+      setAllInventory(result.data);
+      console.log(result.data);
+    }
+  }
 
   return (
     <>
@@ -20,7 +37,7 @@ export default function Index() {
                 <h2 className="">Inventory</h2>
               </div>
               <div>
-                <form>
+                {/* <form> */}
                   <div className="form-group ForSearch">
                     <input
                       type="text"
@@ -35,18 +52,14 @@ export default function Index() {
                       setModal(true);
                     }}
                   >
-                    <label className="form_label">
+          
                       <img src={upload} style={{ marginRight: "10px" }} />
-                      <input
-                        type="file"
-                        className="form-control"
-                        id="uploadFile"
-                      />
+                    
                       Upload books
-                    </label>
+                   
                     
                   </button>
-                </form>
+                {/* </form> */}
               </div>
             </div>
 
@@ -56,7 +69,7 @@ export default function Index() {
                 <a href="#">Download Inventory List</a>
               </div>
             </div>
-            <Table />
+            <Table inventoryData={allInventory} />
           </div>
         </div>
       </main>

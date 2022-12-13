@@ -4,7 +4,7 @@ import EditImage from './Modal/EditImage';
 import Multistepsmodal from '../Component/Modal/Multistepsmodal';
 
 
-export default function Table() {
+export default function Table({inventoryData}) {
   const [box, setBox] = useState(false);
   const [modal2, setModal2]= useState(false);
   const handleClickClose = () => {
@@ -14,6 +14,8 @@ export default function Table() {
   const handleClickClose2 = () => {
     setModal3(!modal3)
   };
+  // console.log(inventoryData);
+
   return (
     <>
       <div className='table-responsive'>
@@ -28,15 +30,16 @@ export default function Table() {
               <th>Genre</th>
             </tr>
           </thead>
-          <tbody>
+          {inventoryData?.map((item, index) => {
+            return(
+              <tbody>
             <tr>
-              <td className='text-center'>1</td>
-              <td>The Design Of Everyday Things</td>
-              <td>Hardcover
-                Paperback</td>
-              <td>158</td>
-              <td>650.50</td>
-              <td>Horror
+              <td className='text-center'>{index + 1}</td>
+              <td>{item.bookName?.bookName}</td>
+              <td>{item.type}</td>
+              <td>{item.quantity}</td>
+              <td>{item.price}</td>
+              <td>{item.genre?.categoryName}
                 <a href="#" onClick={() => { setBox(!box) }}><i class="fa-solid fa-ellipsis-vertical"></i>
                   {box &&(<div className='boxwrap'>
                     <h2 onClick={() => { setModal3(true) }}><i class="fa-solid fa-pencil"></i>Edit details</h2>
@@ -46,18 +49,9 @@ export default function Table() {
                 </a>
               </td>
             </tr>
-            <tr>
-              <td className='text-center'>1</td>
-              <td>The Design Of Everyday Things</td>
-              <td>Hardcover
-                Paperback</td>
-              <td>158</td>
-              <td>650.50</td>
-              <td>Horror
-                <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
-              </td>
-            </tr>
           </tbody>
+            )
+          })}
         </table>
       </div>
       {modal2 && (

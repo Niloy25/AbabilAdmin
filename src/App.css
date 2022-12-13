@@ -825,20 +825,15 @@ body {
   height: 64px;
   background: #8F6447;
   margin-left: 14px;
-}
-
-.enrollment .InventoryPage .fileuploadbtn .form_label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-weight: 500;
   font-size: 18px;
   line-height: 30px;
   color: #fff;
   text-align: center;
   margin-bottom: 0;
-
 }
+
+
 
 .enrollment .InventoryPage .fileuploadbtn #uploadFile {
   position: absolute;

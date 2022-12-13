@@ -17,11 +17,11 @@ export async function requestData(url, method, params = {}) {
   }
   let apiUrl = BASE_URL + url;
   var myHeaders = new Headers();
-  if (token != "") {
+  if (token !== "") {
     myHeaders.append("Authorization", token);
 
   }
-  myHeaders.append("userType", "Admin");
+  myHeaders.append("userType", "Distributor");
   myHeaders.append("Content-Type", "application/json");
   myHeaders.append("Access-Control-Allow-Origin", "http://43.205.232.125:8005/api/v1/");
   var raw = JSON.stringify(params);

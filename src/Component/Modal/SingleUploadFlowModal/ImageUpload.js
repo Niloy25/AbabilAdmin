@@ -1,8 +1,9 @@
 import React from "react";
 import bookimg from "../../../images/Rectangle 271.png";
 import upload from "../../../images/Image.png";
-export default function ImageUpload() {
+export default function ImageUpload({handleClick}) {
   const loop = [1, 2, 3];
+  
   return (
     <>
       <div className="book_edit_modal4 imageUploadModal modal-part">
@@ -20,6 +21,7 @@ export default function ImageUpload() {
                         type="file"
                         className="form-control"
                         id="uploadFile"
+                        onChange={(e) => handleClick(e.target.files[0])}
                       />
                       Upload back image
                     </label>
