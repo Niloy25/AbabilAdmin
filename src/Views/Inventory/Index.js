@@ -23,7 +23,7 @@ export default function Index() {
     console.log(result);
     if(result.status){
       setAllInventory(result.data);
-      console.log(result.data);
+      console.log("ViewInventory", result.data);
     }
   }
 

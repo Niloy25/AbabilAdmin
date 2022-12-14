@@ -9,6 +9,7 @@ export default function Singleupload(props) {
     setModal3(!modal3)
   };
   const [modal7, setModal7]= useState(false);
+  
   const handleClickClose7 = () => {
     setModal7(!modal7)
   };

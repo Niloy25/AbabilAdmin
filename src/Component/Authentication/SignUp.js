@@ -5,8 +5,13 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { requestData } from "../../Utils/HttpClient";
 import {reactLocalStorage} from 'reactjs-localstorage';
+import Signin from "../Modal/Signin";
 
 function SignUp() {
+  const [modal, setModal]=useState (false);
+  const handleClickClose = () => {
+    setModal(!modal)
+  };
   const data = {
     firstname: "",
     lastname: "",
@@ -141,7 +146,7 @@ function SignUp() {
         reactLocalStorage.setObject('adminData', result.data);
         toast.success(result.message, toastOptions);
         setTimeout(() => {
-          navigate("/dashboard");
+          setModal(true)
         }, 3000);
       } else {
         toast.error(result.message, toastOptions);
@@ -605,6 +610,7 @@ function SignUp() {
         </div>
       </section>
       <ToastContainer />
+      {modal &&(<Signin handleClickClose={handleClickClose}/>)}
     </>
   );
 }
