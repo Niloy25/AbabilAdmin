@@ -1110,7 +1110,7 @@ height: 32px;
   background: #E7D9D0;
   padding: 20px;
   border-radius: 2px;
-  position: absolute;
+  /* position: absolute; */
 }
 
 /***end**/
@@ -1944,7 +1944,7 @@ margin-top: 10px;
   padding: 2%;
 }
 .SigninModal .modal-content{
-  max-width: 418px;
+  max-width: 460px;
   margin: 0 auto;
   height: 439px;
   padding: 32px 28px;

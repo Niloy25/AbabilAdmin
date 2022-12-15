@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import indianFlag from "../../images/indian-flag.png";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -8,10 +8,24 @@ import {reactLocalStorage} from 'reactjs-localstorage';
 import Signin from "../Modal/Signin";
 
 function SignUp() {
-  const [modal, setModal]=useState (false);
+  const [modal, setModal]=useState (true);
   const handleClickClose = () => {
     setModal(!modal)
   };
+
+  const authenticate = JSON.parse(reactLocalStorage.get("adminLogin"));
+  console.log(authenticate.status);
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if(authenticate.status){
+      navigate('/dashboard')
+    }
+    else{
+      navigate('/')
+    }
+  }, [authenticate.status])
+  
   const data = {
     firstname: "",
     lastname: "",
@@ -36,7 +50,8 @@ function SignUp() {
 
   const [registerData, setRegisterData] = useState(data);
   const [checkBox, setCheckBox] = useState(false);
-  const navigate = useNavigate();
+  const location = useLocation()
+  console.log("Location", location);
 
   const toastOptions = {
     position: "bottom-right",
@@ -81,8 +96,8 @@ function SignUp() {
     } else if (!emailRegex.test(email)) {
       toast.error("Enter a valid email!", toastOptions);
       return false;
-    } else if (password.length !== 8) {
-      toast.error("Password can't be Empty!", toastOptions);
+    } else if (password.length <= 8) {
+      toast.error("Password should be 8 characters!", toastOptions);
       return false;
     } else if (!phoneRegex.test(mobile)) {
       toast.error("Enter a valid phone number!", toastOptions);

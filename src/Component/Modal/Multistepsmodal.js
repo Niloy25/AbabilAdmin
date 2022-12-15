@@ -4,9 +4,10 @@ import EditImage from './EditImage';
 import Editbookdetails from './Editbookdetails';
 import Confirmation from './Confirmation';
 function Multistepsmodal(props) {
+  console.log("Mul", props.itemData);
     const steps = [
         { title: 'EditImage', component: <EditImage /> },
-        { title: 'Edit book details', component: <Editbookdetails /> },
+        { title: 'Edit book details', component: <Editbookdetails itemData={props.itemData} /> },
         { title: 'Confirmation', component: <Confirmation /> }
       ];
   return (

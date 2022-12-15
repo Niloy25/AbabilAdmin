@@ -20,10 +20,10 @@ export default function Index() {
 
   const fetchInventory = async() => {
     const result = await requestData('distributor/view-all-books', 'GET');
-    console.log(result);
-    if(result.status){
+    // console.log("Inventory", result);
+    if(result && result.status){
       setAllInventory(result.data);
-      console.log("ViewInventory", result.data);
+      // console.log("ViewInventory", result.data);
     }
   }
 
