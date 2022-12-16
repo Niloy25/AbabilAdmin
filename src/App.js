@@ -24,8 +24,8 @@ import PrivateRoute from "./Layout/PrivateRoute";
 
 function App() {
 
-  const authenticate = JSON.parse(reactLocalStorage.get("adminLogin"));
-  console.log(authenticate.status);
+  // const authenticate = JSON.parse(reactLocalStorage.get("adminLogin"));
+  // console.log(authenticate.status);
 
 
   return (

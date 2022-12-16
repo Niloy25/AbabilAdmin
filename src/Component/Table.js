@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 export default function Table({ inventoryData }) {
   const [box, setBox] = useState(false);
   const [itemData, setItemData] = useState("")
+  const [bookId, setBookId] = useState("")
   const [modal2, setModal2] = useState(false);
   const handleClickClose = () => {
     setModal2(!modal2);
@@ -66,6 +67,7 @@ export default function Table({ inventoryData }) {
                           <h2
                             onClick={() => {
                               setModal2(true);
+                              setBookId(item._id)
                             }}
                           >
                             <i class="fa-regular fa-trash-can"></i>Remove
@@ -90,8 +92,9 @@ export default function Table({ inventoryData }) {
             "The book “The design of everyday things” will be deleted and no longer be shown to the buyers."
           }
           cancelbtn={"NO"}
-          confirmbtn={"Yes, Delete"}
+          confirmbtn={"Yes"}
           handleClickClose={handleClickClose}
+          bookId={bookId}
         />
       )}
       {modal3 && (

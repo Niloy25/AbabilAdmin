@@ -3,12 +3,14 @@ import { useLocation } from "react-router-dom";
 import { requestData } from "../../Utils/HttpClient";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { TagsInput } from "react-tag-input-component";
 
 function Editbookdetails({ itemData }) {
   console.log("BookData", itemData);
   console.log(itemData.BookType[0]._id); 
 
   const [tag, setTag] = useState([]);
+  const [itemDataBook, setItemDataBook] = useState(itemData)
 
   const [bookPrice, setBookPrice] = useState([
     {
@@ -29,9 +31,11 @@ function Editbookdetails({ itemData }) {
     const result = await requestData("distributor/view-booktype", "GET");
     if (result && result.status) {
       setGetBookType(result.data);
-      console.log(result.data);
+      console.log("BookType", result.data);
     }
   };
+
+  console.log("State", itemDataBook);
 
   const data = {
     bookName: "",
@@ -65,103 +69,104 @@ function Editbookdetails({ itemData }) {
     setBookPrice(list);
   };
 
-  const toastOptions = {
-    position: "bottom-right",
-    autoClose: 2000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "colored",
-  };
+  // const toastOptions = {
+  //   position: "bottom-right",
+  //   autoClose: 2000,
+  //   hideProgressBar: false,
+  //   closeOnClick: true,
+  //   pauseOnHover: true,
+  //   draggable: true,
+  //   progress: undefined,
+  //   theme: "colored",
+  // };
 
-  const handleValidation = () => {
-    const {
-      bookName,
-      author,
-      publisher,
-      edition,
-      isbnNo,
-      bookDesc,
-      aboutAuthor,
-      deliveryEstimate,
-      image,
-    } = bookDetail;
+  // const handleValidation = () => {
+  //   const {
+  //     bookName,
+  //     author,
+  //     publisher,
+  //     edition,
+  //     isbnNo,
+  //     bookDesc,
+  //     aboutAuthor,
+  //     deliveryEstimate,
+  //     image,
+  //   } = bookDetail;
 
-    const { bookTypeID, mrp, price, quantity } = bookPrice;
+  //   const { bookTypeID, mrp, price, quantity } = bookPrice;
 
-    if (bookName === "") {
-      toast.error("Book Name can't be Empty!", toastOptions);
-      return false;
-    } else if (author === "") {
-      toast.error("Author can't be Empty!", toastOptions);
-      return false;
-    } else if (publisher === "") {
-      toast.error("Publisher can't be Empty!", toastOptions);
-      return false;
-    } else if (edition === "") {
-      toast.error("Edition can't be Empty!", toastOptions);
-      return false;
-    } else if (isbnNo === "") {
-      toast.error("IsBnNo can't be Empty!", toastOptions);
-      return false;
-    } else if (bookDesc === "") {
-      toast.error("Book Describtion can't be Empty!", toastOptions);
-      return false;
-    } else if (aboutAuthor === "") {
-      toast.error("Say Something about author!", toastOptions);
-      return false;
-    } else if (bookTypeID === "") {
-      toast.error("Please select any book type!", toastOptions);
-      return false;
-    } else if (mrp === "") {
-      toast.error("Please give the price!", toastOptions);
-      return false;
-    } else if (price === "") {
-      toast.error("Please give your price!", toastOptions);
-      return false;
-    } else if (quantity === "") {
-      toast.error("Please enter the quantity!", toastOptions);
-      return false;
-    } else if (deliveryEstimate === "") {
-      toast.error("Please give the Estimate delivery date!", toastOptions);
-      return false;
-    } else if (tag.length === 0) {
-      toast.error("Please give any tags!", toastOptions);
-      return false;
-    } else {
-      return true;
-    }
-  };
+  //   if (bookName === "") {
+  //     toast.error("Book Name can't be Empty!", toastOptions);
+  //     return false;
+  //   } else if (author === "") {
+  //     toast.error("Author can't be Empty!", toastOptions);
+  //     return false;
+  //   } else if (publisher === "") {
+  //     toast.error("Publisher can't be Empty!", toastOptions);
+  //     return false;
+  //   } else if (edition === "") {
+  //     toast.error("Edition can't be Empty!", toastOptions);
+  //     return false;
+  //   } else if (isbnNo === "") {
+  //     toast.error("IsBnNo can't be Empty!", toastOptions);
+  //     return false;
+  //   } else if (bookDesc === "") {
+  //     toast.error("Book Describtion can't be Empty!", toastOptions);
+  //     return false;
+  //   } else if (aboutAuthor === "") {
+  //     toast.error("Say Something about author!", toastOptions);
+  //     return false;
+  //   } else if (bookTypeID === "") {
+  //     toast.error("Please select any book type!", toastOptions);
+  //     return false;
+  //   } else if (mrp === "") {
+  //     toast.error("Please give the price!", toastOptions);
+  //     return false;
+  //   } else if (price === "") {
+  //     toast.error("Please give your price!", toastOptions);
+  //     return false;
+  //   } else if (quantity === "") {
+  //     toast.error("Please enter the quantity!", toastOptions);
+  //     return false;
+  //   } else if (deliveryEstimate === "") {
+  //     toast.error("Please give the Estimate delivery date!", toastOptions);
+  //     return false;
+  //   } else if (tag.length === 0) {
+  //     toast.error("Please give any tags!", toastOptions);
+  //     return false;
+  //   } else {
+  //     return true;
+  //   }
+  // };
 
-  const submitBook = async () => {
-    if (handleValidation()) {
+  const editBook = async () => {
+    // if (handleValidation()) {
       const dataSend = {
-        bookName: bookDetail.bookName,
-        author: bookDetail.author,
-        publisher: bookDetail.publisher,
-        edition: bookDetail.edition,
-        isbnNo: bookDetail.isbnNo,
+        bookName: bookDetail.bookName !== "" ? bookDetail.bookName : itemData.bookName,
+        author: bookDetail.author !== "" ? bookDetail.author : itemData.author,
+        publisher: bookDetail.publisher !== "" ? bookDetail.publisher : itemData.publisher,
+        edition: bookDetail.edition !== "" ? bookDetail.edition : itemData.edition,
+        isbnNo: bookDetail.isbnNo !== "" ? bookDetail.isbnNo : itemData.isbnNo,
         tags: tag,
-        bookDesc: bookDetail.bookDesc,
-        aboutAuthor: bookDetail.aboutAuthor,
-        deliveryEstimate: bookDetail.deliveryEstimate,
+        bookDesc: bookDetail.bookDesc !== "" ? bookDetail.bookDesc : itemData.bookDesc,
+        aboutAuthor: bookDetail.aboutAuthor !== "" ? bookDetail.aboutAuthor : itemData.aboutAuthor,
+        deliveryEstimate: bookDetail.deliveryEstimate !== "" ? bookDetail.deliveryEstimate : itemData.deliveryEstimate,
         bookPriceDetails: bookPrice,
         image:
           "https://media.istockphoto.com/id/1256910594/vector/set-of-paper-books-with-colorful-hard-cover-isolated-on-white-background-vector-flat.jpg?s=612x612&w=0&k=20&c=5IaTPgzhnHO3FMvSavQdB5ytf6MQRbZOJOBJ7BFT6mI=",
       };
-      const result = await requestData(
-        "distributor/single-book-upload",
-        "POST",
-        dataSend
-      );
-      console.log(result);
-      if (result && result.status) {
-        console.log(result.data);
-        toast.success("Book added Successfully!", toastOptions);
-      }
-    }
+      console.log(dataSend);
+      // const result = await requestData(
+      //   "distributor/single-book-upload",
+      //   "POST",
+      //   dataSend
+      // );
+      // console.log(result);
+      // if (result && result.status) {
+      //   console.log(result.data);
+      //   toast.success("Book added Successfully!", toastOptions);
+      // }
+    // }
   };
 
   return (
@@ -252,6 +257,14 @@ function Editbookdetails({ itemData }) {
                     }
                   />
                 </div>
+                <div className="form-group mb-3">
+                    <TagsInput
+                      value={itemData.tags}
+                      onChange={setTag}
+                      name="fruits"
+                      placeHolder="Enter Tags"
+                    />
+                  </div>
               </form>
             </div>
             <div className="col-md-6">
@@ -331,7 +344,7 @@ function Editbookdetails({ itemData }) {
                         className="form-control"
                         id=""
                         name="mrp"
-                        placeholder="MRP"
+                        placeholder={itemData.mrp}
                         onChange={(event) => handleChange(index, event)}
                       />
                     </div>
@@ -343,7 +356,7 @@ function Editbookdetails({ itemData }) {
                         className="form-control"
                         id=""
                         name="price"
-                        placeholder="Your price"
+                        placeholder={itemData.price}
                         onChange={(event) => handleChange(index, event)}
                       />
                     </div>
@@ -355,7 +368,7 @@ function Editbookdetails({ itemData }) {
                         className="form-control"
                         id=""
                         name="quantity"
-                        placeholder="Quantity"
+                        placeholder={itemData.quantity}
                         onChange={(event) => handleChange(index, event)}
                       />
                     </div>
@@ -380,7 +393,7 @@ function Editbookdetails({ itemData }) {
                   type="text"
                   className="form-control"
                   id=""
-                  placeholder={15}
+                  placeholder={itemData.deliveryEstimate}
                 />
                 <div className="unit_text">
                   <h6>Days</h6>
@@ -389,7 +402,7 @@ function Editbookdetails({ itemData }) {
             </div>
           </form>
           <div className="savechanges_btn">
-            <button className="btn">Save changes</button>
+            <button onClick={editBook} className="btn">Save changes</button>
           </div>
         </div>
       </div>

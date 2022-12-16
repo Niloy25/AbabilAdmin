@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import indianFlag from "../../images/indian-flag.png";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -13,7 +13,7 @@ function SignUp() {
     setModal(!modal)
   };
 
-  const authenticate = JSON.parse(reactLocalStorage.get("adminLogin"));
+  const authenticate = reactLocalStorage.getObject("adminLogin");
   console.log(authenticate.status);
   const navigate = useNavigate()
 
@@ -50,8 +50,6 @@ function SignUp() {
 
   const [registerData, setRegisterData] = useState(data);
   const [checkBox, setCheckBox] = useState(false);
-  const location = useLocation()
-  console.log("Location", location);
 
   const toastOptions = {
     position: "bottom-right",
