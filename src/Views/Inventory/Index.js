@@ -12,6 +12,16 @@ export default function Index() {
   useEffect(() => {
     fetchInventory()
   }, [])
+
+  // const handleFilterName = (data=[]) => {
+  //   console.log("FilterName...", data);
+  //   setAllInventory(data)
+  // }
+
+  // const handleFilterQty = (data=[]) => {
+  //   console.log("FilterQty...", data);
+  //   setAllInventory(data)
+  // }
   
 
   const handleClickClose = () => {
@@ -64,12 +74,16 @@ export default function Index() {
             </div>
 
             <div className="row secondRow">
-              <ProductInformation/>
+              <ProductInformation  
+              // handleFilterName={handleFilterName} 
+              // handleFilterQty={handleFilterQty}
+              setAllInventory={setAllInventory}
+              />
               <div className="rgtCnt">
                 <a href="#">Download Inventory List</a>
               </div>
             </div>
-            <Table inventoryData={allInventory} />
+            <Table setAllInventory={setAllInventory} inventoryData={allInventory} />
           </div>
         </div>
       </main>

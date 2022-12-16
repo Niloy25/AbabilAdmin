@@ -1,7 +1,79 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { requestData } from "../Utils/HttpClient";
 
-export default function ProductInformation() {
+export default function ProductInformation({setAllInventory}) {
+  const [bookName, setBookName] = useState("");
+  const [bookQty, setbookQty] = useState("");
+  const [priceHighToLow, setPriceHighToLow] = useState("");
+  const [priceLowToHigh, setPriceLowToHigh] = useState("");
+  // const [filterBook, setFilterBook] = useState([])
   const [box2, setBox2] = useState(false);
+
+  const filterBookName = async () => {
+    const result = await requestData("distributor/sort-by-bookname", "GET");
+    if (result && result.data) {
+      setAllInventory(result.data);
+    }
+    // setFilterBook(result.data)
+    // handleFilterName(result.data);
+    console.log("Fill", result.data);
+  };
+
+  const filterQty = async () => {
+    const result = await requestData("distributor/sort-by-quantity", "GET");
+    if (result && result.status) {
+      setAllInventory(result.data);
+      // handleFilterQty(result.data);
+    }
+    console.log("FillQty", result.data);
+    // setFilterBook(result.data)
+  };
+
+  const filterHighToLow = async () => {
+    const dataSend = {
+      type: "high-to-low"
+    }
+    const result = await requestData("distributor/sort-by-price", "GET", dataSend);
+    if (result && result.status) {
+      setAllInventory(result.data);
+      // handleFilterQty(result.data);
+    }
+    console.log("FillQty", result.data);
+    // setFilterBook(result.data)
+  };
+
+  const filterLowToHigh = async () => {
+    const dataSend = {
+      type: "low-to-high"
+    }
+    const result = await requestData("distributor/sort-by-price", "GET", dataSend);
+    if (result && result.status) {
+      setAllInventory(result.data);
+      // handleFilterQty(result.data);
+    }
+    console.log("FillQty", result.data);
+    // setFilterBook(result.data)
+  };
+
+  useEffect(() => {
+    if (bookName) {
+      filterBookName();
+      setBox2(false)
+    }
+    else if (bookQty) {
+      filterQty();
+      setBox2(false)
+    }
+    else if(priceHighToLow){
+      filterHighToLow()
+      setBox2(false)
+    }
+    else if(priceLowToHigh){
+      filterLowToHigh()
+      setBox2(false)
+    }
+  }, [bookName, bookQty, priceHighToLow, priceLowToHigh]);
+
   return (
     <>
       <div className="wrapper">
@@ -20,40 +92,56 @@ export default function ProductInformation() {
                 <div className="form-group ">
                   <div className="form-check">
                     <label className="form-check-label" htmlFor="gridCheck">
-                      Horror
+                      Price - High to Low
                     </label>
                     <input
                       className="form-check-input"
                       type="checkbox"
                       id="gridCheck"
+                      onChange={(e) => setPriceHighToLow(e.target.checked)}
                     />
                   </div>
                 </div>
                 <div className="form-group ">
                   <div className="form-check">
                     <label className="form-check-label" htmlFor="gridCheck">
-                      Fiction
+                      Price - Low to High
                     </label>
                     <input
                       className="form-check-input"
                       type="checkbox"
                       id="gridCheck"
+                      onChange={(e) => setPriceLowToHigh(e.target.value)}
                     />
                   </div>
                 </div>
                 <div className="form-group ">
                   <div className="form-check">
                     <label className="form-check-label" htmlFor="gridCheck">
-                      Sci-Fi
+                      Sort By Book Name
                     </label>
                     <input
                       className="form-check-input"
                       type="checkbox"
                       id="gridCheck"
+                      onChange={(e) => setBookName(e.target.checked)}
                     />
                   </div>
                 </div>
                 <div className="form-group ">
+                  <div className="form-check">
+                    <label className="form-check-label" htmlFor="gridCheck">
+                      Sort By Quantity
+                    </label>
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      id="gridCheck"
+                      onChange={(e) => setbookQty(e.target.checked)}
+                    />
+                  </div>
+                </div>
+                {/* <div className="form-group ">
                   <div className="form-check">
                     <label className="form-check-label" htmlFor="gridCheck">
                       Comedy
@@ -76,7 +164,7 @@ export default function ProductInformation() {
                       id="gridCheck"
                     />
                   </div>
-                </div>
+                </div> */}
               </div>
             )}
           </div>

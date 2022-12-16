@@ -4,10 +4,10 @@ import EditImage from "./Modal/EditImage";
 import Multistepsmodal from "../Component/Modal/Multistepsmodal";
 import { useNavigate } from "react-router-dom";
 
-export default function Table({ inventoryData }) {
+export default function Table({ inventoryData, setAllInventory }) {
   const [box, setBox] = useState(false);
-  const [itemData, setItemData] = useState("")
-  const [bookId, setBookId] = useState("")
+  const [itemData, setItemData] = useState("");
+  const [bookId, setBookId] = useState("");
   const [modal2, setModal2] = useState(false);
   const handleClickClose = () => {
     setModal2(!modal2);
@@ -17,11 +17,11 @@ export default function Table({ inventoryData }) {
     setModal3(!modal3);
   };
   console.log("Inventory...", inventoryData);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
     <>
-    {console.log("Table", itemData)}
+      {console.log("Table", itemData)}
       <div className="table-responsive">
         <table className="table">
           <thead>
@@ -40,11 +40,9 @@ export default function Table({ inventoryData }) {
                 <tr key={index}>
                   <td className="text-center">{index + 1}</td>
                   <td>{item.bookName}</td>
-                  {item.BookType?.map((item, index) => {
-                    return <td key={index}>{item.categoryName}</td>;
-                  })}
-                  <td>{item.quantity}</td>
-                  <td>{item.price}</td>
+                  <td>{item.type}</td>
+                  <td>{item?.quantity}</td>
+                  <td>{item?.price}</td>
                   <td>
                     {item.genre?.categoryName}
                     <a
@@ -59,7 +57,7 @@ export default function Table({ inventoryData }) {
                           <h2
                             onClick={() => {
                               setModal3(true);
-                              setItemData(item)
+                              setItemData(item);
                             }}
                           >
                             <i class="fa-solid fa-pencil"></i>Edit details
@@ -67,7 +65,7 @@ export default function Table({ inventoryData }) {
                           <h2
                             onClick={() => {
                               setModal2(true);
-                              setBookId(item._id)
+                              setBookId(item._id);
                             }}
                           >
                             <i class="fa-regular fa-trash-can"></i>Remove
@@ -95,11 +93,12 @@ export default function Table({ inventoryData }) {
           confirmbtn={"Yes"}
           handleClickClose={handleClickClose}
           bookId={bookId}
+          setAllInventory={setAllInventory}
         />
       )}
       {modal3 && (
         <Multistepsmodal
-        itemData={itemData}
+          itemData={itemData}
           handleClickClose2={handleClickClose2}
         />
       )}

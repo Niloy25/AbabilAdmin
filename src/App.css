@@ -897,8 +897,8 @@ body {
   background: #EBDED6;
   border-radius: 2px;
   position: absolute;
-  width: 312px;
-  height: 268px;
+  width: 250px;
+  height: 180px;
 }
 .secondRow .wrapper {
   display: flex;
@@ -1135,7 +1135,7 @@ height: 32px;
 }
 
 .enrollment .InventoryPage .secondRow .form-check-label {
-  width: 60px;
+  width: 140px;
   color: #523929;
 }
 

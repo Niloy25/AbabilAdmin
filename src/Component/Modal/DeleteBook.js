@@ -26,12 +26,24 @@ export default function DeleteBook(props) {
         console.log(result);
         if (result && result.status) {
             toast.success(result.message, toastOptions)
-            props.handleClickClose()
+            fetchInventory()
+            setTimeout(() => {
+                props.handleClickClose()
+            }, 2000);
         }
         else {
             toast.error(result.message, toastOptions)
         }
     }
+
+    const fetchInventory = async() => {
+        const result = await requestData('distributor/view-all-books', 'GET');
+        // console.log("Inventory", result);
+        if(result && result.status){
+          props.setAllInventory(result.data);
+          // console.log("ViewInventory", result.data);
+        }
+      }
 
     return (
         <>

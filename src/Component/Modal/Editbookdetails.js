@@ -7,7 +7,7 @@ import { TagsInput } from "react-tag-input-component";
 
 function Editbookdetails({ itemData }) {
   console.log("BookData", itemData);
-  console.log(itemData.BookType[0]._id); 
+  console.log(itemData.bookPriceDetails?._id); 
 
   const [tag, setTag] = useState([]);
   const [itemDataBook, setItemDataBook] = useState(itemData)
@@ -319,7 +319,7 @@ function Editbookdetails({ itemData }) {
                         className="form-control"
                         id="booktype"
                         name="bookTypeID"
-                        value={itemData.BookType[0]._id}
+                        value={itemData.bookPriceDetails?.bookTypeId}
                         onChange={(event) => handleChange(index, event)}
                       >
                         <option selected="">Book type</option>
@@ -344,7 +344,7 @@ function Editbookdetails({ itemData }) {
                         className="form-control"
                         id=""
                         name="mrp"
-                        placeholder={itemData.mrp}
+                        placeholder={itemData.bookPriceDetails?.mrp}
                         onChange={(event) => handleChange(index, event)}
                       />
                     </div>
@@ -356,7 +356,7 @@ function Editbookdetails({ itemData }) {
                         className="form-control"
                         id=""
                         name="price"
-                        placeholder={itemData.price}
+                        placeholder={itemData.bookPriceDetails?.price}
                         onChange={(event) => handleChange(index, event)}
                       />
                     </div>
@@ -368,7 +368,7 @@ function Editbookdetails({ itemData }) {
                         className="form-control"
                         id=""
                         name="quantity"
-                        placeholder={itemData.quantity}
+                        placeholder={itemData.bookPriceDetails?.quantity}
                         onChange={(event) => handleChange(index, event)}
                       />
                     </div>
