@@ -22,18 +22,34 @@ export default function Index() {
   //   console.log("FilterQty...", data);
   //   setAllInventory(data)
   // }
-  
+
 
   const handleClickClose = () => {
     setModal(!modal);
   };
 
-  const fetchInventory = async() => {
+  const fetchInventory = async () => {
     const result = await requestData('distributor/view-all-books', 'GET');
     // console.log("Inventory", result);
-    if(result && result.status){
+    if (result && result.status) {
       setAllInventory(result.data);
-      // console.log("ViewInventory", result.data);
+      console.log("ViewInventory", result.data);
+    }
+  }
+
+  const searchResult = (searchData) => {
+    console.log(searchData);
+    // console.log("searchValue", searchValue);
+    if(searchData === ""){
+      fetchInventory()
+    }
+    const filterBook = allInventory.filter((item) => item.bookName.toLowerCase().includes(searchData.toLowerCase()) || item.bookType.toLowerCase().includes(searchData.toLowerCase()))
+    console.log("Filter", filterBook);
+    if (filterBook.length > 0) {
+      setAllInventory(filterBook)
+    }
+    else{
+      fetchInventory()
     }
   }
 
@@ -48,36 +64,41 @@ export default function Index() {
               </div>
               <div>
                 {/* <form> */}
-                  <div className="form-group ForSearch">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Search here"
-                    />
-                    <i className="fa-solid fa-magnifying-glass"></i>
-                  </div>
-                  <button
-                    className="btn fileuploadbtn"
-                    onClick={() => {
-                      setModal(true);
+                <div className="form-group ForSearch">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Search here"
+                    onChange={(e) => {
+                      searchResult(e.target.value)
                     }}
-                  >
-          
-                      <img src={upload} style={{ marginRight: "10px" }} />
-                    
-                      Upload books
-                   
-                    
-                  </button>
+                  />
+                  <i className="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <button
+                  className="btn fileuploadbtn"
+                  onClick={() => {
+                    setModal(true);
+                  }}
+                >
+
+                  <img src={upload} style={{ marginRight: "10px" }} />
+
+                  Upload books
+
+
+                </button>
                 {/* </form> */}
               </div>
             </div>
 
             <div className="row secondRow">
-              <ProductInformation  
-              // handleFilterName={handleFilterName} 
-              // handleFilterQty={handleFilterQty}
-              setAllInventory={setAllInventory}
+              <ProductInformation
+                // handleFilterName={handleFilterName} 
+                // handleFilterQty={handleFilterQty}
+                setAllInventory={setAllInventory}
+                allInventory={allInventory}
+                fetchInventory={fetchInventory}
               />
               <div className="rgtCnt">
                 <a href="#">Download Inventory List</a>

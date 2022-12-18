@@ -899,6 +899,7 @@ body {
   position: absolute;
   width: 250px;
   height: 180px;
+  z-index: 10;
 }
 .secondRow .wrapper {
   display: flex;
@@ -3586,4 +3587,5 @@ color: #ffffff;
     padding: 20px;
   }
 }
+
 

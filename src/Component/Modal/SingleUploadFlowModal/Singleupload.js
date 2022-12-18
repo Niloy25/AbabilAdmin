@@ -3,6 +3,8 @@ import u1 from "../../../images/Group 91.png";
 import u2 from "../../../images/Group 339.png";
 import UploadImageModal from "./UploadImageModal";
 import ImageUploadForBulk from "./ImageUploadForBulk";
+
+
 export default function Singleupload(props) {
   const [modal3, setModal3]= useState(false);
   const handleClickClose2 = () => {

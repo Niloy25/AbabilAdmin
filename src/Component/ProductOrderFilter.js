@@ -1,23 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { requestData } from "../Utils/HttpClient";
 
-export default function ProductInformation({allInventory, setAllInventory, fetchInventory }) {
+export default function ProductOrderFilter({ allOrder, setAllOrder, fetchAllOrder }) {
   const [bookName, setBookName] = useState("");
   const [bookQty, setbookQty] = useState("");
   const [priceHighToLow, setPriceHighToLow] = useState("");
   const [priceLowToHigh, setPriceLowToHigh] = useState("");
   const [lowerPrice, setLowerPrice] = useState("")
   const [upperPrice, setUpperPrice] = useState("")
-  const [filterBook, setFilterBook] = useState([])
+  const [filterOrder, setFilterOrder] = useState([])
   // const [allBook, setAllBook] = useState(allInventory)
   const [box2, setBox2] = useState(false);
  
 
-  // Function Calling For Inventory 
+//   Function Calling For Order 
   const filterBookName = async () => {
-    const result = await requestData("distributor/sort-by-bookname", "GET");
+    const result = await requestData("distributor/order-sort-by-bookname", "GET");
     if (result && result.data) {
-      setAllInventory(result.data);
+      setAllOrder(result.data);
     }
     // setFilterBook(result.data)
     // handleFilterName(result.data);
@@ -25,9 +25,9 @@ export default function ProductInformation({allInventory, setAllInventory, fetch
   };
 
   const filterQty = async () => {
-    const result = await requestData("distributor/sort-by-quantity", "GET");
+    const result = await requestData("distributor/order-sort-by-unit", "GET");
     if (result && result.status) {
-      setAllInventory(result.data);
+      setAllOrder(result.data);
       // handleFilterQty(result.data);
     }
     console.log("FillQty", result.data);
@@ -38,9 +38,9 @@ export default function ProductInformation({allInventory, setAllInventory, fetch
     const dataSend = {
       type: "high-to-low"
     }
-    const result = await requestData("distributor/sort-by-price", "GET", dataSend);
+    const result = await requestData("distributor/order-sort-by-price", "GET", dataSend);
     if (result && result.status) {
-      setAllInventory(result.data);
+      setAllOrder(result.data);
       // handleFilterQty(result.data);
       console.log("FillPriceHigh", result.data);
     }
@@ -51,9 +51,9 @@ export default function ProductInformation({allInventory, setAllInventory, fetch
     const dataSend = {
       type: "low-to-high"
     }
-    const result = await requestData("distributor/sort-by-price", "GET", dataSend);
+    const result = await requestData("distributor/order-sort-by-price", "GET", dataSend);
     if (result && result.status) {
-      setAllInventory(result.data);
+      setAllOrder(result.data);
       // handleFilterQty(result.data);
     }
     console.log("FillPriceLow", result.data);
@@ -62,14 +62,14 @@ export default function ProductInformation({allInventory, setAllInventory, fetch
 
   const filterPriceRange = (low, high) => {
     // if(upperPrice === ""){
-    //   setAllInventory(allInventory)
+    //   setAllOrder(allOrder)
     // }
     console.log(parseInt(high));
-    console.log("All", allInventory);
-    const priceRange = allInventory.filter((item) => item.bookPriceDetails.price >= parseInt(low) && item.bookPriceDetails.price <= parseInt(high))
+    console.log("All", allOrder);
+    const priceRange = allOrder.filter((item) => item.price >= parseInt(low) && item.price <= parseInt(high))
     console.log("PriceRange", priceRange);
-    setFilterBook(priceRange)
-    console.log("AllBook", allInventory);
+    setFilterOrder(priceRange)
+    console.log("AllBook", allOrder);
       // setAllInventory(priceRange)
   }
 
@@ -90,13 +90,13 @@ export default function ProductInformation({allInventory, setAllInventory, fetch
       filterLowToHigh()
       setBox2(false)
     }
-    else if(filterBook && filterBook.length > 0){
-      setAllInventory(filterBook)
+    else if(filterOrder && filterOrder.length > 0){
+      setAllOrder(filterOrder)
     }
     else{
-     fetchInventory() 
+     fetchAllOrder() 
     }
-  }, [bookName, bookQty, priceHighToLow, priceLowToHigh, filterBook]);
+  }, [bookName, bookQty, priceHighToLow, priceLowToHigh, filterOrder]);
 
 
   // Function Calling For Order 

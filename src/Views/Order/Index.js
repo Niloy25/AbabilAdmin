@@ -1,15 +1,19 @@
 import React, {useState, useEffect} from "react";
 import h1 from "../../images/Rectangle 293.png";
 import OrderDispatchedModal from "../../Component/Modal/OrderDispatchedModal";
-import ProductInformation from "../../Component/ProductInformation";
+// import ProductInformation from "../../Component/ProductInformation";
 import { requestData } from "../../Utils/HttpClient";
 import moment from "moment";
+import { useLocation } from "react-router";
+import ProductOrderFilter from "../../Component/ProductOrderFilter";
 
 export default function Index() {
 
   const loop = [1, 2, 3];
   const [modal5, setModal5]= useState(false);
-  const [getAllOrder, setGetAllOrder] = useState([])
+  const [allOrder, setAllOrder] = useState([])
+  const location = useLocation()
+  console.log("Location", location);
 
   useEffect(() => {
     fetchAllOrder()
@@ -19,7 +23,7 @@ export default function Index() {
     const result = await requestData('distributor/view-distributor-orders', 'GET')
     console.log(result);
     if(result && result.status){
-      setGetAllOrder(result.data)
+      setAllOrder(result.data)
       console.log("AllOrder...", result.data);
     }
   }
@@ -27,6 +31,22 @@ export default function Index() {
   const handleClickClose4 = () => {
     setModal5(!modal5)
   };
+
+  const searchResult = (searchData) => {
+    console.log(searchData);
+    // console.log("searchValue", searchValue);
+    if(searchData === ""){
+      fetchAllOrder()
+    }
+    const filterBook = allOrder.filter((item) => JSON.stringify(item).toLowerCase().includes(searchData.toLowerCase()))
+    console.log("Filter", filterBook);
+    if (filterBook.length > 0) {
+      setAllOrder(filterBook)
+    }
+    else{
+      fetchAllOrder()
+    }
+  }
 
   return (
     <>
@@ -40,6 +60,7 @@ export default function Index() {
                   type="text"
                   className="form-control"
                   placeholder="Search here"
+                  onChange={(e) => searchResult(e.target.value)}
                 />
                 <i class="fa-solid fa-magnifying-glass"></i>
               </div>
@@ -77,10 +98,10 @@ export default function Index() {
               </div>
             </div>
             <div className="row secondRow">
-           <ProductInformation/>
+           <ProductOrderFilter fetchAllOrder={fetchAllOrder} allOrder={allOrder} setAllOrder={setAllOrder} />
             </div>
 
-            {getAllOrder.map((item, index) => {
+            {allOrder?.map((item, index) => {
               return (
                 <div key={index} className="frthRow mt-4">
                   <div className="col-lg-5 col-md-12 col-12">

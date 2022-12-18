@@ -151,7 +151,7 @@ function Editbookdetails({ itemData }) {
         bookDesc: bookDetail.bookDesc !== "" ? bookDetail.bookDesc : itemData.bookDesc,
         aboutAuthor: bookDetail.aboutAuthor !== "" ? bookDetail.aboutAuthor : itemData.aboutAuthor,
         deliveryEstimate: bookDetail.deliveryEstimate !== "" ? bookDetail.deliveryEstimate : itemData.deliveryEstimate,
-        bookPriceDetails: bookPrice,
+        bookPriceDetails: bookPrice.length > 0 ? bookPrice : [itemData.bookPriceDetails?.bookTypeId],
         image:
           "https://media.istockphoto.com/id/1256910594/vector/set-of-paper-books-with-colorful-hard-cover-isolated-on-white-background-vector-flat.jpg?s=612x612&w=0&k=20&c=5IaTPgzhnHO3FMvSavQdB5ytf6MQRbZOJOBJ7BFT6mI=",
       };

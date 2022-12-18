@@ -77,7 +77,7 @@ export default function BookDetails() {
   const handleValidation = () => {
     const { bookName, author, publisher, edition, isbnNo, bookDesc, aboutAuthor, deliveryEstimate, image} = bookDetail
 
-    const { bookTypeID, mrp, price, quantity } = bookPrice
+    // const { bookTypeID, mrp, price, quantity } = bookPrice
 
     if (bookName === "") {
       toast.error("Book Name can't be Empty!", toastOptions);
@@ -100,19 +100,25 @@ export default function BookDetails() {
     } else if (aboutAuthor === "") {
       toast.error("Say Something about author!", toastOptions);
       return false;
-    } else if (bookTypeID === "") {
-      toast.error("Please select any book type!", toastOptions);
+    } 
+    else if(bookPrice.findIndex((item) => item.bookTypeID === "" || item.mrp === "" || item.price === "" || item.quantity === "") >= 0){
+      toast.error("Book Type, Price, Mrp, Quantity can't be empty!", toastOptions);
       return false;
-    } else if (mrp === "") {
-      toast.error("Please give the price!", toastOptions);
-      return false;
-    } else if (price === "") {
-      toast.error("Please give your price!", toastOptions);
-      return false;
-    } else if (quantity === "") {
-      toast.error("Please enter the quantity!", toastOptions);
-      return false;
-    } else if (deliveryEstimate === "") {
+    }
+    // else if (bookTypeID === "") {
+    //   toast.error("Please select any book type!", toastOptions);
+    //   return false;
+    // } else if (mrp === "") {
+    //   toast.error("Please give the price!", toastOptions);
+    //   return false;
+    // } else if (price === "") {
+    //   toast.error("Please give your price!", toastOptions);
+    //   return false;
+    // } else if (quantity === "") {
+    //   toast.error("Please enter the quantity!", toastOptions);
+    //   return false;
+    // }
+     else if (deliveryEstimate === "") {
       toast.error("Please give the Estimate delivery date!", toastOptions);
       return false;
     } else if (tag.length === 0) {

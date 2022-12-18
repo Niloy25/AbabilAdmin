@@ -39,10 +39,10 @@ export default function Table({ inventoryData, setAllInventory }) {
               return (
                 <tr key={index}>
                   <td className="text-center">{index + 1}</td>
-                  <td>{item.bookName}</td>
-                  <td>{item.type}</td>
-                  <td>{item?.quantity}</td>
-                  <td>{item?.price}</td>
+                  <td>{item.bookName?.bookName ? item?.bookName?.bookName : item.bookName}</td>
+                  <td>{item.bookType}</td>
+                  <td>{item.bookPriceDetails?.quantity}</td>
+                  <td>{item.bookPriceDetails?.price}</td>
                   <td>
                     {item.genre?.categoryName}
                     <a
