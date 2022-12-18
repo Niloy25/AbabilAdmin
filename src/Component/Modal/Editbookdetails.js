@@ -5,9 +5,9 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { TagsInput } from "react-tag-input-component";
 
-function Editbookdetails({ itemData }) {
+function Editbookdetails({ itemData, setActiveStep }) {
   console.log("BookData", itemData);
-  console.log(itemData.bookPriceDetails?._id); 
+  console.log(itemData.bookPriceDetails?._id);
 
   const [tag, setTag] = useState([]);
   const [itemDataBook, setItemDataBook] = useState(itemData)
@@ -141,31 +141,31 @@ function Editbookdetails({ itemData }) {
 
   const editBook = async () => {
     // if (handleValidation()) {
-      const dataSend = {
-        bookName: bookDetail.bookName !== "" ? bookDetail.bookName : itemData.bookName,
-        author: bookDetail.author !== "" ? bookDetail.author : itemData.author,
-        publisher: bookDetail.publisher !== "" ? bookDetail.publisher : itemData.publisher,
-        edition: bookDetail.edition !== "" ? bookDetail.edition : itemData.edition,
-        isbnNo: bookDetail.isbnNo !== "" ? bookDetail.isbnNo : itemData.isbnNo,
-        tags: tag,
-        bookDesc: bookDetail.bookDesc !== "" ? bookDetail.bookDesc : itemData.bookDesc,
-        aboutAuthor: bookDetail.aboutAuthor !== "" ? bookDetail.aboutAuthor : itemData.aboutAuthor,
-        deliveryEstimate: bookDetail.deliveryEstimate !== "" ? bookDetail.deliveryEstimate : itemData.deliveryEstimate,
-        bookPriceDetails: bookPrice.length > 0 ? bookPrice : [itemData.bookPriceDetails?.bookTypeId],
-        image:
-          "https://media.istockphoto.com/id/1256910594/vector/set-of-paper-books-with-colorful-hard-cover-isolated-on-white-background-vector-flat.jpg?s=612x612&w=0&k=20&c=5IaTPgzhnHO3FMvSavQdB5ytf6MQRbZOJOBJ7BFT6mI=",
-      };
-      console.log(dataSend);
-      // const result = await requestData(
-      //   "distributor/single-book-upload",
-      //   "POST",
-      //   dataSend
-      // );
-      // console.log(result);
-      // if (result && result.status) {
-      //   console.log(result.data);
-      //   toast.success("Book added Successfully!", toastOptions);
-      // }
+    const dataSend = {
+      bookName: bookDetail.bookName !== "" ? bookDetail.bookName : itemData.bookName,
+      author: bookDetail.author !== "" ? bookDetail.author : itemData.author,
+      publisher: bookDetail.publisher !== "" ? bookDetail.publisher : itemData.publisher,
+      edition: bookDetail.edition !== "" ? bookDetail.edition : itemData.edition,
+      isbnNo: bookDetail.isbnNo !== "" ? bookDetail.isbnNo : itemData.isbnNo,
+      tags: tag,
+      bookDesc: bookDetail.bookDesc !== "" ? bookDetail.bookDesc : itemData.bookDesc,
+      aboutAuthor: bookDetail.aboutAuthor !== "" ? bookDetail.aboutAuthor : itemData.aboutAuthor,
+      deliveryEstimate: bookDetail.deliveryEstimate !== "" ? bookDetail.deliveryEstimate : itemData.deliveryEstimate,
+      bookPriceDetails: bookPrice.length > 0 ? bookPrice : [itemData.bookPriceDetails?.bookTypeId],
+      image:
+        "https://media.istockphoto.com/id/1256910594/vector/set-of-paper-books-with-colorful-hard-cover-isolated-on-white-background-vector-flat.jpg?s=612x612&w=0&k=20&c=5IaTPgzhnHO3FMvSavQdB5ytf6MQRbZOJOBJ7BFT6mI=",
+    };
+    console.log(dataSend);
+    // const result = await requestData(
+    //   "distributor/single-book-upload",
+    //   "POST",
+    //   dataSend
+    // );
+    // console.log(result);
+    // if (result && result.status) {
+    //   console.log(result.data);
+    //   toast.success("Book added Successfully!", toastOptions);
+    // }
     // }
   };
 
@@ -258,13 +258,13 @@ function Editbookdetails({ itemData }) {
                   />
                 </div>
                 <div className="form-group mb-3">
-                    <TagsInput
-                      value={itemData.tags}
-                      onChange={setTag}
-                      name="fruits"
-                      placeHolder="Enter Tags"
-                    />
-                  </div>
+                  <TagsInput
+                    value={itemData.tags}
+                    onChange={setTag}
+                    name="fruits"
+                    placeHolder="Enter Tags"
+                  />
+                </div>
               </form>
             </div>
             <div className="col-md-6">

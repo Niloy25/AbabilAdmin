@@ -4,7 +4,7 @@ import { requestData } from "../../../Utils/HttpClient";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-export default function BookDetails() {
+export default function BookDetails({setActiveStep}) {
   const [tag, setTag] = useState([]);
 
   const [bookPrice, setBookPrice] = useState([
@@ -150,6 +150,9 @@ export default function BookDetails() {
       if(result && result.status){
         console.log(result.data);
         toast.success("Book added Successfully!", toastOptions)
+        setTimeout(() => {
+          setActiveStep(2)
+        }, 2000);
       }
     }
   };

@@ -6,6 +6,7 @@ import Confirmation from './Confirmation';
 export default function UploadImageModal(props) {
 
   const [image, setImage] = useState("")
+  const [activeStep, setActiveStep] = useState(0)
 
   const handleClick = data => {
     setImage(data)
@@ -13,7 +14,7 @@ export default function UploadImageModal(props) {
   }
     const steps = [
         { title: 'Upload image', component: <ImageUpload handleClick={handleClick} /> },
-        { title: 'Book details', component: <BookDetails /> },
+        { title: 'Book details', component: <BookDetails setActiveStep={setActiveStep} /> },
         { title: 'Confirmation', component: <Confirmation /> }
       ];
   return (
@@ -22,7 +23,7 @@ export default function UploadImageModal(props) {
 <div className='multistepform'>
           <div className='stepsfrom'>
             <div className='close-btn' onClick={props.handleClickClose2}>X</div>
-            <Multistep activeStep={0} showNavigation={true} steps={steps} />
+            <Multistep activeStep={activeStep} showNavigation={true} steps={steps} />
           </div>
         </div>
 </>
